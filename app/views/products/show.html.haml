@@ -14,7 +14,13 @@
   = @product.rating
 %p
   %b Category:
-  = @product.category
+  = @product.category.name
+
+-#<%= image_tag @user.avatar.url %>
+%p
+  = image_tag @product.photo.url
+
+
 
 = link_to 'Edit', edit_product_path(@product)
 \|
