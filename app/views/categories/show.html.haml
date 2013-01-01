@@ -1,0 +1,27 @@
+
+-#
+-#%p
+-#  %b Name:
+-#  = @category.name
+-#%p
+-#  %b Description:
+-#  = @category.description
+-#%p
+-#  %b Index:
+-#  = @category.index
+-#
+-#= link_to 'Edit', edit_category_path(@category)
+-#\|
+-#= link_to 'Back', categories_path
+
+= render 'categories/nav'
+
+%p#notice= notice
+.row
+  .twelve.columns
+    %h2
+      = @category.name
+    %p
+      = @category.description
+-#.row
+  .twelve.columns

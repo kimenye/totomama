@@ -1,3 +1,24 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+header {
+  margin-top: 20px;
+}
+a.logo-box{
+  display: block;
+  background: url(/assets/logo.jpg) no-repeat left top;
+  height: 115px;
+}
+
+a.logo-box:hover {
+  //background: transparent;
+  background-color: #ffffff;
+}
+
+.copyright {
+  //background:#3f3f3f;
+  //color:#fff;
+  //padding: 11px 0;
+  padding-top: 10px;
+}

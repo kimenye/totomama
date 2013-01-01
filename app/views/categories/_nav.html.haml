@@ -1,0 +1,13 @@
+.row
+  .twelve.columns
+    %nav.top-bar
+      %ul
+        %li.name
+          %h1
+            %a{:href => categories_path} Categories
+        %li.toggle-topbar
+          %a{:href => "#"}
+      %section
+        %ul.left
+          %li
+            = link_to 'New Category', new_category_path
