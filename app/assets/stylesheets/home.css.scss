@@ -22,3 +22,45 @@ a.logo-box:hover {
   //padding: 11px 0;
   padding-top: 10px;
 }
+
+.custom > li a {
+  color: #2BA6CB;
+}
+
+.custom > li:last-child {
+  border: none;
+}
+
+.nav-bar{
+  height: 40px;
+  background: #fff;
+  border: none;
+}
+
+.nav-bar li{
+  height: 40px;
+  border: none;
+}
+
+li.top {
+  border-right: 1px dashed gray;
+}
+
+.nav-bar > li > a:first-child {
+  padding: 0 5px;
+  width: 120px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.nav-bar > li.has-flyout > a:first-child::after {
+  content: normal;
+}
+
+.nav-bar > li.has-flyout > a:first-child {
+  padding-right: 15px;
+}
+
+.nav-bar > li.has-flyout > a:first-child::after {
+  right: 5px;
+}

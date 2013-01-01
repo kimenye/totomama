@@ -15,6 +15,19 @@
           .three.columns
             %a.logo-box{:href => root_url}
           .nine.columns
+        .twelve.columns
+          %ul.nav-bar.custom
+            - @categories.each do |category|
+              %li.has-flyout.top
+                %a{:href => "#"}
+                  = category.name
+            %li.has-flyout.top
+              %a The TotoMama Marketplace
+            %li.has-flyout.top
+              %a Events and Activities
+            %li.has-flyout.top
+              %a Getting the right help
+
     #main{:role => "main"}
       = yield
     %footer
