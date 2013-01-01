@@ -1,0 +1,13 @@
+.row
+  .twelve.columns
+    %nav.top-bar
+      %ul
+        %li.name
+          %h1
+            %a{:href => products_path} Products
+        %li.toggle-topbar
+          %a{:href => "#"}
+      %section
+        %ul.left
+          %li
+            = link_to 'New Product', new_product_path
