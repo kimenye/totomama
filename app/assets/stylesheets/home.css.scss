@@ -11,6 +11,51 @@ a.logo-box{
   height: 115px;
 }
 
+.mini-top-nav {
+  float: right;
+}
+
+.social li, .mini-top-nav li {
+  float: right;
+  margin-left: 14px;
+  list-style: none;
+}
+
+.social{
+  margin: 10px 0px 0px 0px;
+}
+
+.social li a{
+  width: 35px;
+  height: 35px;
+  float: right;
+  //margin-left: 10px;
+  overflow: hidden;
+  background: url('/assets/socio-icons.jpg') no-repeat left top;
+}
+
+.social .twt{
+  background-position:-33px 0px;
+}
+
+.social .pin{
+  background-position: -66px 0px;
+}
+
+.mini-top-nav .divider {
+  margin-top: 14px;
+}
+
+.search-bar input {
+  border: none;
+  font-weight: 100;
+  font-size: 2em;
+  height: 55px;
+  border-radius: 18px;
+  background:#eee;
+  padding-left: 20px;
+}
+
 a.logo-box:hover {
   //background: transparent;
   background-color: #ffffff;
