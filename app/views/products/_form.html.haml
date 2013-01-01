@@ -17,14 +17,29 @@
       = f.label :description
       = f.text_area :description
     .four.columns
-      .row
-        .twelve.columns
-          = f.label :price
+      = f.label :price
+      .row.collapse
+        .four.columns
           = f.text_field :price
+        .two.columns
+          %span.postfix
+            kshs
+        .six.columns
       .row
         .twelve.columns
           = f.label :rating
-          = f.number_field :rating
+          = f.hidden_field :rating
+          .rating
+            %input#star5{:type => 'radio', :name => 'product[rating]', :value => '5'}
+              %label{:for => 'star5', :title => '5'} 5 Stars
+            %input#star4{:type => 'radio', :name => 'product[rating]', :value => '4'}
+              %label{:for => 'star4', :title => '4'} 4 Stars
+            %input#star3{:type => 'radio', :name => 'product[rating]', :value => '3'}
+              %label{:for => 'star3', :title => '3'} 3 Stars
+            %input#star2{:type => 'radio', :name => 'product[rating]', :value => '2'}
+              %label{:for => 'star2', :title => '2'} 2 Stars
+            %input#star1{:type => 'radio', :name => 'product[rating]', :value => '1'}
+              %label{:for => 'star1', :title => '1'} 1 Stars
       .row
         .twelve.columns
           = f.label :category
@@ -39,3 +54,14 @@
     .twelve.columns
       .actions
         = f.submit 'Save', :class => "button"
+
+:javascript
+  $(document).ready(function() {
+
+    var rating = "#{@product.rating}";
+    if (rating != "") {
+      $('#star' + rating).attr('checked', 'checked');
+    }
+
+
+  });
