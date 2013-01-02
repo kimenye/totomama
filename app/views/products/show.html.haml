@@ -8,6 +8,7 @@
     .row.detail
       .three.columns
         = image_tag @product.photo.url
+        = render :partial => "layouts/rating_readonly", :locals => { :product => @product }
       .nine.columns
         .twelve.columns
           %h5
