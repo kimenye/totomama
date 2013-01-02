@@ -1,27 +1,26 @@
-%p#notice= notice
-
-%p
-  %b Name:
-  = @product.name
-%p
-  %b Description:
-  = @product.description
-%p
-  %b Price:
-  = @product.price
-%p
-  %b Rating:
-  = @product.rating
-%p
-  %b Category:
-  = @product.category.name
-
--#<%= image_tag @user.avatar.url %>
-%p
-  = image_tag @product.photo.url
-
-
-
-= link_to 'Edit', edit_product_path(@product)
-\|
-= link_to 'Back', products_path
+.row
+  .twelve.columns.ad
+    .row
+      .panel
+        %h3 ADVERTISEMENT
+.row
+  .nine.columns
+    .row.detail
+      .four.columns
+        = image_tag @product.photo.url
+      .eight.columns
+        .twelve.columns
+          %h5
+            = @product.name
+        -#.twelve.columns
+          %p
+            = @product.description
+    - if !@cross_sell_products.empty?
+      .row.header
+        .twelve.columns
+          %h5 You might also like
+      .row
+        .twelve.columns
+          - @cross_sell_products.each do |product|
+            = render :partial => "layouts/product", :locals => { :product => product }
+  = render "layouts/sidebar"

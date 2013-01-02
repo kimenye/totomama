@@ -14,22 +14,7 @@
     .row
       .twelve.columns
         - @popular_products.each do |product|
-          .two.columns.summary
-            %a.th{:href => product_path(product)}
-              = image_tag product.photo.url
-            %a{:href => product_path(product)}
-              = product.name
-            .rating-readonly{'data-rating' => product.rating, 'data-type' => "product", 'data-id' => product.id}
-              %input{:type => 'radio', :value => '5', :id => "star5-product-#{product.id}"}
-                %label{:for => "star5-product-#{product.id}", :title => '5'} 5 Stars
-              %input{:type => 'radio', :value => '4', :id => "star4-product-#{product.id}"}
-                %label{:for => "star4-product-#{product.id}", :title => '4'} 4 Stars
-              %input{:type => 'radio', :value => '3', :id => "star3-product-#{product.id}"}
-                %label{:for => "star3-product-#{product.id}", :title => '3'} 3 Stars
-              %input{:type => 'radio', :value => '2', :id => "star2-product-#{product.id}"}
-                %label{:for => "star2-product-#{product.id}", :title => '2'} 2 Stars
-              %input{:type => 'radio', :value => '1', :id => "star1-product-#{product.id}"}
-                %label{:for => "star1-product-#{product.id}", :title => '1'} 1 Stars
+          = render :partial => "layouts/product", :locals => { :product => product }
     .row
       %br
     .row.header
@@ -47,14 +32,4 @@
         %h5
           %a{:href=> "#"} See More +
 
-  .three.columns.ad.sidebar
-    .panel
-      %h5 ADVERTISEMENT
-    .panel
-      %h5 ADVERTISEMENT
-    .panel
-      %h5 ADVERTISEMENT
-    .panel
-      %h5 ADVERTISEMENT
-    .panel
-      %h5 ADVERTISEMENT
+  = render "layouts/sidebar"

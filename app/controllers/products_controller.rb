@@ -18,6 +18,8 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     impressionist(@product)
 
+    @cross_sell_products = Product.where('category_id = ? and id != ?', @product.category_id, @product.id).limit(6)
+
     respond_to do |format|
       format.html { render :layout => 'layouts/application'}
       format.json { render json: @product }
