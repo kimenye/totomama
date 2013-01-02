@@ -49,6 +49,9 @@
           %br
           = f.label :photo
           = f.file_field :photo
+      .row
+        .twelve.columns
+          = image_tag @product.photo.url
     .two
   .row
     .twelve.columns

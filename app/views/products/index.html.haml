@@ -6,7 +6,7 @@
       %thead
         %tr
           %th Name
-          %th Description
+          -#%th Description
           %th Price
           %th Rating
           %th Category
@@ -15,7 +15,7 @@
       - @products.each do |product|
         %tr
           %td= product.name
-          %td= product.description
+          -#%td= product.description
           %td= product.price
           %td= product.rating
           %td= product.category.name
