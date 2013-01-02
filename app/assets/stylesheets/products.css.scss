@@ -1,0 +1,58 @@
+$lightColor: #65c8c6;
+$darkColor: #46166b;
+
+.detail .tabs dd.active a,
+.detail .tabs dd a,
+.detail .tabs li a,
+.detail .tabs li.active a {
+  color: #ffffff;
+
+}
+
+.detail .tabs dd a,
+.detail .tabs dd.active a {
+  border-radius: 5px 5px 0px 0px;
+}
+
+.detail .tabs {
+  border: 0px;
+}
+
+.detail .tabs dd.active a, .tabs li.active a {
+  border-left: 1px solid $lightColor;
+  border-right: 1px solid $lightColor;
+  border-top: 1px solid $lightColor;
+
+  display: block;
+}
+
+.detail .tabs dd,
+.detail .tabs li {
+  margin-right: 15px;
+}
+
+.detail .tabs dd.active a {
+  background-color: $lightColor;
+}
+
+.detail .tabs dd a {
+  background-color: $darkColor;
+}
+
+.detail .tabs li.active {
+  border: 0px;
+}
+
+.detail ul.tabs-content.contained li.active {
+  border-left: 1px solid $lightColor;
+  border-bottom: 1px solid $lightColor;
+  border-right: 1px solid $lightColor;
+  border-top: 5px solid $lightColor;
+  border-radius: 0px 5px 5px 5px;
+}
+
+.detail .tabs dd.active,
+.detail .tabs li.active {
+  margin-top: 0px;
+  border: none;
+}

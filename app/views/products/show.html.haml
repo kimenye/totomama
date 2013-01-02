@@ -6,15 +6,21 @@
 .row
   .nine.columns
     .row.detail
-      .four.columns
+      .three.columns
         = image_tag @product.photo.url
-      .eight.columns
+      .nine.columns
         .twelve.columns
           %h5
             = @product.name
-        -#.twelve.columns
-          %p
-            = @product.description
+        .twelve.columns
+          %dl.tabs.contained
+            %dd.active
+              %a{:href => "#productDescription"} Description
+            %dd.hide-for-small
+              %a{:href => "#productReviews"} Reviews
+          %ul.tabs-content.contained
+            %li#productDescriptionTab.active This is simple tab 1s content. Pretty neat, huh?
+            %li#productReviewsTab This is simple tab 2s content. Now you see it!
     - if !@cross_sell_products.empty?
       .row.header
         .twelve.columns
