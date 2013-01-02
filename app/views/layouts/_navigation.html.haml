@@ -11,8 +11,7 @@
                 %h5 Products
                 - category[:products].each do |product|
                   %li
-                    %a
-                      = product.name
+                    = link_to product.name, product_path(product)
             .row
               .six.columns.ad-panel
                 .panel

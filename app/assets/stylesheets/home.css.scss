@@ -173,6 +173,43 @@ li.top {
   margin-top: 20px;
 }
 
+.header {
+  background-color: #46166b;
+  border-radius: 5px;
+}
+
+.header h5, a {
+  color: #ffffff;
+}
+
+.summary {
+  margin: 20px 0px;
+}
+
+.summary a {
+  color: #46166b;
+  font-size: 12px;
+}
+
+.summary a.th {
+  margin-bottom: 5px;
+}
+
+.ad .panel {
+  border-radius: 5px;
+  background: #65c8c6;
+  height: 90px;
+}
+
+.sidebar .panel {
+  height: 120px;
+}
+
+.ad .panel h3, .ad .panel h5 {
+  text-align: center;
+  color: #ffffff;
+}
+
 
 @media only screen and (max-width: 767px) {
   .custom {

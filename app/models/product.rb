@@ -1,4 +1,5 @@
 class Product < ActiveRecord::Base
+  is_impressionable :counter_cache => true
   belongs_to :category
   attr_accessible :description, :name, :price, :rating, :category_id
 

@@ -1,13 +1,7 @@
 class HomeController < ApplicationController
   def index
-    categories = Category.all
-
-    @categories = []
-    categories.each do |c|
-      @categories <<  {
-          :category => c,
-          :products => Product.find_all_by_category_id(c.id)
-      }
-    end
+    product_categories
+    @popular_products = Product.order("impressions_count DESC").limit(6)
   end
+
 end

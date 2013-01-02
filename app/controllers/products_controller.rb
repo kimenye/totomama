@@ -14,11 +14,12 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    layout "application"
+    product_categories
     @product = Product.find(params[:id])
+    impressionist(@product)
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render :layout => 'layouts/application'}
       format.json { render json: @product }
     end
   end

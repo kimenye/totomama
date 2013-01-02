@@ -1,2 +1,49 @@
--#%h1 Home#index
--#%p Find me in app/views/home/index.html.haml
+.row
+  .twelve.columns.ad
+    .row
+      .panel
+        %h3 ADVERTISEMENT
+.row
+  .nine.columns
+    .row.header
+      .ten.columns
+        %h5 Most Popular Products
+      .two.columns
+        %h5
+          %a{:href=> "#"} See More +
+    .row
+      .twelve.columns
+        - @popular_products.each do |product|
+          .two.columns.summary
+            %a.th{:href => product_path(product)}
+              = image_tag product.photo.url
+            %a{:href => product_path(product)}
+              = product.name
+    .row
+      %br
+    .row.header
+      .ten.columns
+        %h5 Most Popular Shops
+      .two.columns
+        %h5
+          %a{:href=> "#"} See More +
+    .row
+      %br
+    .row.header
+      .ten.columns
+        %h5 Most Popular Events
+      .two.columns
+        %h5
+          %a{:href=> "#"} See More +
+
+  .three.columns.ad.sidebar
+    .panel
+      %h5 ADVERTISEMENT
+    .panel
+      %h5 ADVERTISEMENT
+    .panel
+      %h5 ADVERTISEMENT
+    .panel
+      %h5 ADVERTISEMENT
+    .panel
+      %h5 ADVERTISEMENT
