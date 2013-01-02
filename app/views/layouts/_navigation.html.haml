@@ -1,12 +1,29 @@
 .twelve.columns
   %ul.nav-bar.custom
-    - @categories.each do |category|
-      %li.has-flyout.top
+    - @categories.each_with_index do |category, i|
+      %li.has-flyout
         %a{:href => "#"}
-          = category.name
-    %li.has-flyout.top
+          = category[:category].name
+        .flyout.menu-flyout
+          .product-flyout-content
+            .row
+              %ul.five.columns
+                %h5 Products
+                - category[:products].each do |product|
+                  %li
+                    %a
+                      = product.name
+            .row
+              .six.columns.ad-panel
+                .panel
+              .six.columns.ad-panel
+                .panel
+      %li.top
+    %li.has-flyout
       %a The TotoMama Marketplace
-    %li.has-flyout.top
+    %li.top
+    %li.has-flyout
       %a Events and Activities
-    %li.has-flyout.top
+    %li.top
+    %li.has-flyout
       %a Getting the right help
