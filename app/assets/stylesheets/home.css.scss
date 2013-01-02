@@ -189,6 +189,8 @@ li.top {
 .summary a {
   color: #46166b;
   font-size: 12px;
+  min-height: 35px;
+  display: block;
 }
 
 .summary a.th {
@@ -218,19 +220,30 @@ li.top {
 }
 
 
-.rating {
+.rating,
+.rating-readonly {
   float:left;
+}
+
+.summary .rating-readonly:not(:checked) > label {
+  font-size: 130%;
 }
 
 /* :not(:checked) is a filter, so that browsers that don’t support :checked don’t
    follow these rules. Every browser that supports :checked also supports :not(), so
    it doesn’t make the test unnecessarily selective */
+.rating-readonly:not(:checked) > input,
 .rating:not(:checked) > input {
   position:absolute;
   top:-9999px;
   clip:rect(0,0,0,0);
 }
 
+.rating-readonly:not(:checked) > label:hover {
+  cursor: default;
+}
+
+.rating-readonly:not(:checked) > label,
 .rating:not(:checked) > label {
   float:right;
   width:1em;
@@ -244,10 +257,12 @@ li.top {
   text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
 }
 
+.rating-readonly:not(:checked) > label:before,
 .rating:not(:checked) > label:before {
   content: '★ ';
 }
 
+.rating-readonly > input:checked ~ label,
 .rating > input:checked ~ label {
   color: #f70;
   text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
