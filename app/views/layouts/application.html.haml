@@ -25,7 +25,7 @@
         FB.getLoginStatus(function(response) {
           if (response.status === 'connected') {
             // connected
-            console.log("We are connected");
+            enableReview();
           } else if (response.status === 'not_authorized') {
             // not_authorized
             disableReview();
