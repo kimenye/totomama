@@ -20,7 +20,9 @@
             %dd.hide-for-small
               %a{:href => "#productReviews"} Reviews
           %ul.tabs-content.contained
-            %li#productDescriptionTab.active This is simple tab 1s content. Pretty neat, huh?
+            %li#productDescriptionTab.active
+              %p
+                = @product.description
             %li#productReviewsTab This is simple tab 2s content. Now you see it!
     - if !@cross_sell_products.empty?
       .row.header

@@ -7,5 +7,5 @@ $(document).ready(function() {
         $("#" + selector).attr('checked', 'checked');
     });
 
-    $('.rating-readonly :radio').attr('disabled', 'disabled')
+    $('.rating-readonly :radio').attr('disabled', 'disabled');
 });

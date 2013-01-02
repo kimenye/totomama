@@ -9,6 +9,41 @@
         = csrf_meta_tags
         = yield(:head)
   %body{:class => "#{controller_name} #{action_name}"}
+    #fb-root
+    :javascript
+      // Additional JS functions here
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '462061233858880', // App ID
+          channelUrl : '//localhost:3000/channel.html', // Channel File
+          status     : true, // check login status
+          cookie     : true, // enable cookies to allow the server to access the session
+          xfbml      : true  // parse XFBML
+        });
+
+        // Additional init code here
+        FB.getLoginStatus(function(response) {
+          if (response.status === 'connected') {
+            // connected
+            console.log("We are connected");
+          } else if (response.status === 'not_authorized') {
+            // not_authorized
+            disableReview();
+          } else {
+            // not_logged_in
+            disableReview();
+          }
+         });
+      };
+
+      // Load the SDK Asynchronously
+      (function(d){
+         var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement('script'); js.id = id; js.async = true;
+         js.src = "//connect.facebook.net/en_US/all.js";
+         ref.parentNode.insertBefore(js, ref);
+       }(document));
     %header
       .container.row
         .twelve.columns
@@ -37,15 +72,15 @@
                   %li.divider
                     |
                   %li
-                    %a{:href => "#"}
+                    %a{:href => products_path}
                       %h5.subheader
-                        Link
+                        Products
                   %li.divider
                     |
                   %li
-                    %a{:href => "#"}
+                    %a{:href => categories_path}
                       %h5.subheader
-                        Link
+                        Categories
             .row
               .nine.columns.search-bar
                 %input{:type => "text", :name => "search", :placeholder => "What are you looking for?"}
