@@ -3,8 +3,8 @@
     - @categories.each_with_index do |category, i|
       %li.has-flyout
         %a{:href => "#"}
-          = category[:category].name
-        .flyout.menu-flyout
+          = category[:stage].name
+        -#.flyout.menu-flyout
           .product-flyout-content
             .row
               %ul.five.columns

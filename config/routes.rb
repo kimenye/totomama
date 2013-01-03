@@ -1,4 +1,7 @@
 Totomama::Application.routes.draw do
+  resources :stages
+
+
   resources :products
   resources :categories
 
