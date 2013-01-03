@@ -2,7 +2,10 @@ Totomama::Application.routes.draw do
   resources :stages
 
 
-  resources :products
+  resources :products, :shallow => true do
+    resources :ratings
+  end
+
   resources :categories
 
   root :to => "home#index"

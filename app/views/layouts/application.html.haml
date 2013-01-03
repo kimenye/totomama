@@ -24,8 +24,12 @@
         // Additional init code here
         FB.getLoginStatus(function(response) {
           if (response.status === 'connected') {
-            // connected
-            enableReview();
+            FB.api('/me', function(response) {
+                   window.user = response;
+                   console.log('Good to see you, ' + response.name + '.');
+                   enableReview();
+                 });
+
           } else if (response.status === 'not_authorized') {
             // not_authorized
             disableReview();

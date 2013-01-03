@@ -1,4 +1,5 @@
 $lightColor: #65c8c6;
+$mediumColor: #00a9c0;
 $darkColor: #46166b;
 
 .detail .tabs dd.active a,
@@ -61,6 +62,55 @@ $darkColor: #46166b;
   text-align: center;
 }
 
-.rate h4 {
-  margin-top: 6px;
+#loginLink {
+  background: url(/assets/sign-in-with-facebook.png) no-repeat;
+  display: block;
+  height: 47px;
+  width: 223px;
+}
+
+.review h5 {
+  margin-top: 8px;
+  text-align: right;
+}
+
+.review .social li {
+  margin-left: 5px;
+  margin-top: -5px;
+}
+
+.review .social ul {
+  margin-left: 10px;
+}
+
+.your-rating {
+  background-color: $mediumColor;
+}
+
+.your-rating.row {
+  margin: 0 -20px;
+}
+
+.your-rating h5 {
+  text-align: left;
+  color: #ffffff;
+  margin-left: 17px;
+}
+
+.your-rating textarea {
+  margin-left: 17px;
+  //margin-right: 17px;
+}
+
+.your-rating.label {
+  margin-left: 10px;
+}
+
+.your-rating .button {
+  background-color: $lightColor;
+}
+
+.divider.row {
+  border-bottom: 2px solid $lightColor;
+  margin-bottom: 10px;
 }

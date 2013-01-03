@@ -1,0 +1,11 @@
+.rating-readonly{'data-rating' => rating.rating, 'data-type' => "rating", 'data-id' => rating.id}
+  %input{:type => 'radio', :value => '5', :id => "star5-rating-#{rating.id}"}
+    %label{:for => "star5-rating-#{rating.id}", :title => '5'} 5 Stars
+  %input{:type => 'radio', :value => '4', :id => "star4-rating-#{rating.id}"}
+    %label{:for => "star4-rating-#{rating.id}", :title => '4'} 4 Stars
+  %input{:type => 'radio', :value => '3', :id => "star3-rating-#{rating.id}"}
+    %label{:for => "star3-rating-#{rating.id}", :title => '3'} 3 Stars
+  %input{:type => 'radio', :value => '2', :id => "star2-rating-#{rating.id}"}
+    %label{:for => "star2-rating-#{rating.id}", :title => '2'} 2 Stars
+  %input{:type => 'radio', :value => '1', :id => "star1-rating-#{rating.id}"}
+    %label{:for => "star1-rating-#{rating.id}", :title => '1'} 1 Stars

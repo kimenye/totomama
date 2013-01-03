@@ -4,7 +4,7 @@ class Product < ActiveRecord::Base
   friendly_id :name, use: :slugged
 
   belongs_to :category
-  has_many :ratings
+  has_many :ratings, :dependent => :destroy
   attr_accessible :description, :name, :price, :rating, :category_id
 
   attr_accessible :photo
