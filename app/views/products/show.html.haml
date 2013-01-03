@@ -15,15 +15,15 @@
             = @product.name
         .twelve.columns
           %dl.tabs.contained
-            %dd
-              %a{:href => "#productDescription"} Description
             %dd.active
+              %a{:href => "#productDescription"} Description
+            %dd
               %a{:href => "#productReviews"} Reviews
           %ul.tabs-content.contained
-            %li#productDescriptionTab
+            %li#productDescriptionTab.active
               %p
                 = @product.description
-            %li#productReviewsTab.active
+            %li#productReviewsTab
               .row.login
                 .six.columns.centered
                   %a#loginLink{:href => "#"}
