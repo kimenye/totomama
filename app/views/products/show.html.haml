@@ -44,6 +44,11 @@
                         %label{:for => 'star2', :title => '2'} 2 Stars
                       %input#star1{:type => 'radio', :name => 'product[rating]', :value => '1'}
                         %label{:for => 'star1', :title => '1'} 1 Stars
+                .row
+                  .four.columns
+                    %h4 Your Review
+                  .eight.columns
+                    %textarea{:rows => "5"}
     - if !@cross_sell_products.empty?
       .row.header
         .twelve.columns
