@@ -1,4 +1,4 @@
-.two.columns.summary
+.two.columns.summary{:class => (last == true ? "end" : "") }
   %a.th{:href => product_path(product)}
     = image_tag product.photo.url
   %a{:href => product_path(product)}

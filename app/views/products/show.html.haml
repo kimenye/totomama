@@ -50,6 +50,6 @@
           %h5 You might also like
       .row
         .twelve.columns
-          - @cross_sell_products.each do |product|
-            = render :partial => "layouts/product", :locals => { :product => product }
+          - @cross_sell_products.each_with_index do |product, i|
+            = render :partial => "layouts/product", :locals => { :product => product, :last => i == @cross_sell_products.length - 1 }
   = render "layouts/sidebar"
