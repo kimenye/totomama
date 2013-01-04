@@ -1,0 +1,27 @@
+.row
+  .twelve.columns
+    %nav.top-bar
+      %ul
+        %li.name
+          %h1
+            =link_to "Welcome #{current_admin.name}", admin_area_path
+        %li.toggle-topbar
+          %a{:href=>"#"}
+      %section
+        %ul.left
+          %li.divider
+          %li.has-dropdown
+            %a{:href=>"#"} Categories
+            %ul.dropdown
+              %li
+                =link_to "Show Categories", categories_path
+              %li
+                =link_to "New Category", new_category_path
+          %li.has-dropdown
+            %a{:href=>"#"} Products
+            %ul.dropdown
+              %li
+                =link_to "Show Products", products_path
+              %li
+                =link_to "New Product", new_product_path
+

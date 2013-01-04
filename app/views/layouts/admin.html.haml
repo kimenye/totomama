@@ -16,6 +16,8 @@
             %a.logo-box{:href => root_url}
           .nine.columns
     #main{:role => "main"}
+      - if admin_signed_in?
+        =render "layouts/admin_navigation"
       = yield
     %footer
       .copyright.row
