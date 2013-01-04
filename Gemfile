@@ -27,6 +27,7 @@ end
 group :production do
   gem 'pg'
 end
+gem 'devise'
 gem 'impressionist'
 gem 'friendly_id'
 gem 'paperclip'

@@ -76,15 +76,15 @@
                   %li.divider
                     |
                   %li
-                    %a{:href => products_path}
+                    %a{:href => "#"}
                       %h5.subheader
-                        Products
+                        Link
                   %li.divider
                     |
                   %li
-                    %a{:href => categories_path}
+                    %a{:href => "#"}
                       %h5.subheader
-                        Categories
+                        Link
             .row
               .nine.columns.search-bar
                 %input{:type => "text", :name => "search", :placeholder => "What are you looking for?"}
@@ -108,7 +108,6 @@
         .eight.columns
           %ul.inline-list.right
             %li
-              %a{:href => categories_path} Categories
-            %li
-              %a{:href => products_path} Products
+              %a{:href => admin_area_path}
+                Administration
     / ! end of #container

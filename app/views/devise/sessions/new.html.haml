@@ -1,0 +1,39 @@
+.row
+  .six.columns.centered
+    %h4.subheader
+      Administrator
+      %small
+        Log in to update products
+    %hr
+= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+  .row
+    .six.columns.centered
+      - if flash[:alert]
+        .row
+          .alert-box.alert
+            = flash[:alert]
+            %a.close
+              &times;
+      .row
+        .four.columns
+          = f.label :email, :class => "right inline"
+        .eight.columns
+          = f.email_field :email
+      .row
+        .four.columns
+          = f.label :password, :class => "right inline"
+        .eight.columns
+          = f.password_field :password
+      - if devise_mapping.rememberable?
+        .row
+          .eight.columns.offset-by-four
+            = f.check_box :remember_me
+            Remember me
+      .row
+        %br
+        .eight.columns.right.offset-by-four
+          = f.submit "Sign in", :class => "button"
+
+
+
+

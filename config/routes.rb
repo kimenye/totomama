@@ -1,4 +1,6 @@
 Totomama::Application.routes.draw do
+  devise_for :admins
+
   resources :stages
 
 
@@ -9,6 +11,8 @@ Totomama::Application.routes.draw do
   resources :categories
 
   root :to => "home#index"
+
+  match 'administration' => 'admin#index', :as => :admin_area
 
   get '/channel.html' => proc {
     [

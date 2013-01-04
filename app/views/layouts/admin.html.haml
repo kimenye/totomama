@@ -25,7 +25,8 @@
         .eight.columns
           %ul.inline-list.right
             %li
-              %a{:href => categories_path} Categories
-            %li
-              %a{:href => products_path} Products
+              - if admin_signed_in?
+                = link_to "Log out #{current_admin.name}", destroy_admin_session_path, :method => :delete
+              - else
+                = link_to "Back", root_path
     / ! end of #container
