@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130107081110) do
+ActiveRecord::Schema.define(:version => 20130107104124) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -82,6 +82,10 @@ ActiveRecord::Schema.define(:version => 20130107081110) do
     t.integer  "impressions_count"
     t.boolean  "active"
     t.string   "slug"
+    t.string   "address"
+    t.float    "lat"
+    t.float    "lon"
+    t.string   "type"
   end
 
   add_index "products", ["category_id"], :name => "index_products_on_category_id"
