@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130104090959) do
+ActiveRecord::Schema.define(:version => 20130107081110) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -38,7 +38,10 @@ ActiveRecord::Schema.define(:version => 20130104090959) do
     t.integer  "index"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "stage_id"
   end
+
+  add_index "categories", ["stage_id"], :name => "index_categories_on_stage_id"
 
   create_table "impressions", :force => true do |t|
     t.string   "impressionable_type"

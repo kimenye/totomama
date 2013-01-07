@@ -1,21 +1,21 @@
-%h1 Listing stages
+.row
+  .twelve.columns
+    %table
+      %tr
+        %th Name
+        %th Order
+        %th
+        %th
+        %th
 
-%table
-  %tr
-    %th Name
-    %th Order
-    %th
-    %th
-    %th
+      - @stages.each do |stage|
+        %tr
+          %td= stage.name
+          %td= stage.order
+          %td= link_to 'Show', stage
+          %td= link_to 'Edit', edit_stage_path(stage)
+          %td= link_to 'Destroy', stage, method: :delete, data: { confirm: 'Are you sure?' }
 
-  - @stages.each do |stage|
-    %tr
-      %td= stage.name
-      %td= stage.order
-      %td= link_to 'Show', stage
-      %td= link_to 'Edit', edit_stage_path(stage)
-      %td= link_to 'Destroy', stage, method: :delete, data: { confirm: 'Are you sure?' }
+    %br
 
-%br
-
-= link_to 'New Stage', new_stage_path
+    = link_to 'New Stage', new_stage_path

@@ -10,6 +10,13 @@
       %section
         %ul.left
           %li.divider
+            %li.has-dropdown
+              %a{:href=>"#"} Stages
+              %ul.dropdown
+                %li
+                  =link_to "Show Stages", stages_path
+                %li
+                  =link_to "New Stage", new_stage_path
           %li.has-dropdown
             %a{:href=>"#"} Categories
             %ul.dropdown
