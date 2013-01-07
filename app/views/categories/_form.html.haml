@@ -15,7 +15,10 @@
         = f.label :description
         = f.text_area :description
       .field
-        = f.label :index
+        = f.label :index, "Order"
         = f.number_field :index
+      .field
+        = f.label :stage
+        = f.collection_select :stage_id, Stage.all, :id, :name
       .actions
         = f.submit 'Save', :class => "button"

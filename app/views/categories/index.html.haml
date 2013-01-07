@@ -7,13 +7,15 @@
         %tr
           %th Name
           %th Description
-          %th Index
+          %th Stage
+          %th Order
           %th{:colspan => 3}
       %tbody
         - @categories.each do |category|
           %tr
             %td= category.name
             %td= category.description
+            %td= category.stage.name
             %td= category.index
             %td= link_to 'Show', category
             %td= link_to 'Edit', edit_category_path(category)
