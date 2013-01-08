@@ -19,10 +19,24 @@ u = Admin.new(
 )
 u.save!(:validate => false)
 
-stages = Stage.create([
-                          { name: 'I am Pregnant', order: 0},
-                          { name: 'My baby is one year old', order: 1},
-                          { name: 'My baby is 2-3 years old', order: 2},
-                          { name: 'My child is 3-5 years old', order: 3},
-                          { name: 'Healthcare and safety', order: 4},
-                      ])
+pregnant = Stage.find_or_create_by_name_and_order('I am Pregnant', 0)
+one_yr = Stage.find_or_create_by_name_and_order('My baby is one year old',1)
+two_yr = Stage.find_or_create_by_name_and_order('My baby is 2-3 years old',2)
+three_yr = Stage.find_or_create_by_name_and_order('My child is 3-5 years old',3)
+h_a = Stage.find_or_create_by_name_and_order('Healthcare and safety', 4)
+
+puts "Created #{Stage.all.length} stages"
+
+prams = Category.find_or_create_by_name_and_stage_id_and_order('Prams', one_yr.id, 0)
+cots = Category.find_or_create_by_name_and_stage_id_and_order('Cots', pregnant.id, 1)
+bottles = Category.find_or_create_by_name_and_stage_id_and_order('Milk Bottles', pregnant.id, 1)
+
+puts "Created #{Category.all.length} categories"
+
+bottle = Item.find_or_create_by_name_and_category_id_and_description('Avent Natural Bottle', bottles.id, "A bottle that's easy to clean is sure to grab a mom's attention." )
+
+puts "Created #{Item.all.length} items"
+
+bottle = Shop.find_or_create_by_name_and_description_and_lat_and_lon_and_address('Stokke', " High quality baby products and accessories.", -1.298293, 36.762872, "Ground Floor, Junction Mall, Ngong Rd")
+
+puts "Created #{Shop.all.length} shops"

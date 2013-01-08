@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
   def show
     product_categories
     @product = Product.find(params[:id])
-    impressionist(@product)
+    #impressionist(@product)
 
     @cross_sell_products = Product.where('category_id = ? and id != ?', @product.category_id, @product.id).limit(6)
 

@@ -24,6 +24,10 @@
         %h5
           %a{:href=> "#"} See More +
     .row
+      .twelve.columns
+        - @popular_shops.each_with_index do |product, i|
+          = render :partial => "layouts/product", :locals => { :product => product, :last => i== @popular_shops.length - 1 }
+    .row
       %br
     .row.header
       .ten.columns

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130107104124) do
+ActiveRecord::Schema.define(:version => 20130108064554) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(:version => 20130107104124) do
   create_table "categories", :force => true do |t|
     t.string   "name"
     t.text     "description"
-    t.integer  "index"
+    t.integer  "order"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "stage_id"
