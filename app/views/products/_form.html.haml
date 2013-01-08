@@ -17,14 +17,15 @@
       = f.label :description
       = f.text_area :description
     .four.columns
-      = f.label :price
-      .row.collapse
-        .four.columns
-          = f.text_field :price
-        .two.columns
-          %span.postfix
-            kshs
-        .six.columns
+      - if @product.type != "Shop"
+        = f.label :price
+        .row.collapse
+          .four.columns
+            = f.text_field :price
+          .two.columns
+            %span.postfix
+              kshs
+          .six.columns
       .row
         .twelve.columns
           = f.label :rating
