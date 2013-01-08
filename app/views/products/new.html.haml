@@ -1,6 +1,9 @@
 = render 'products/nav'
 .row
   .twelve.columns
-    %h3 New Product
+    - if @product.type == "Shop"
+      %h3 New Shop
+    - else
+      %h3 New Product
 
 = render 'form'

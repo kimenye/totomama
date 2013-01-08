@@ -29,7 +29,12 @@ class ProductsController < ApplicationController
   # GET /products/new
   # GET /products/new.json
   def new
-    @product = Product.new
+    puts "#{params}"
+    if params[:type] == "Shop"
+      @product = Shop.new
+    else
+      @product = Product.new
+    end
 
     respond_to do |format|
       format.html # new.html.erb
