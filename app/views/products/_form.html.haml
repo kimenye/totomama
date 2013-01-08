@@ -53,6 +53,23 @@
         .twelve.columns
           = image_tag @product.photo.url
     .two
+  - if @product.type == "Shop"
+    %input{:type=>"hidden", :value => "Shop", :name => "type" }
+    .row
+      .six.columns
+        = f.label :address
+        = f.text_field :address
+      .six.columns
+    .row
+      .six.columns
+        = f.label :lat
+        = f.text_field :lat
+      .six.columns
+    .row
+      .six.columns
+        = f.label :lon
+        = f.text_field :lon
+      .six.columns
   .row
     .twelve.columns
       .actions
