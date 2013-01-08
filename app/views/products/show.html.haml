@@ -19,6 +19,9 @@
               %a{:href => "#productDescription"} Description
             %dd
               %a{:href => "#productReviews"} Reviews
+            - if @product.type == "Shop"
+              %dd
+                %a{:href => '#shopLocation'} Location
           %ul.tabs-content.contained
             %li#productDescriptionTab.active
               %p
@@ -85,6 +88,9 @@
                           = review.description
                       .three.columns.summary
                         = render :partial => "layouts/rating_readonly_review", :locals => { :rating => review }
+            %li#shopLocationTab
+              %p
+                = @product.address
     - if !@cross_sell_products.empty?
       .row.header
         .twelve.columns

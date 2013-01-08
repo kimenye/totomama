@@ -50,7 +50,11 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-    @product = Product.new(params[:product])
+    if params[:type] == "Shop"
+      @product = Shop.new(params[:product])
+    else
+      @product = Product.new(params[:product])
+    end
 
     respond_to do |format|
       if @product.save
@@ -61,6 +65,7 @@ class ProductsController < ApplicationController
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # PUT /products/1
