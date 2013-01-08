@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130108064554) do
+ActiveRecord::Schema.define(:version => 20130108184837) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -32,6 +32,19 @@ ActiveRecord::Schema.define(:version => 20130108064554) do
   add_index "admins", ["email"], :name => "index_admins_on_email", :unique => true
   add_index "admins", ["reset_password_token"], :name => "index_admins_on_reset_password_token", :unique => true
 
+  create_table "articles", :force => true do |t|
+    t.integer  "admin_id"
+    t.string   "title"
+    t.text     "content"
+    t.string   "status"
+    t.integer  "category_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "articles", ["admin_id"], :name => "index_articles_on_admin_id"
+  add_index "articles", ["category_id"], :name => "index_articles_on_category_id"
+
   create_table "categories", :force => true do |t|
     t.string   "name"
     t.text     "description"
@@ -42,6 +55,22 @@ ActiveRecord::Schema.define(:version => 20130108064554) do
   end
 
   add_index "categories", ["stage_id"], :name => "index_categories_on_stage_id"
+
+  create_table "ckeditor_assets", :force => true do |t|
+    t.string   "data_file_name",                  :null => false
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.integer  "assetable_id"
+    t.string   "assetable_type",    :limit => 30
+    t.string   "type",              :limit => 30
+    t.integer  "width"
+    t.integer  "height"
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+  end
+
+  add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
+  add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
 
   create_table "impressions", :force => true do |t|
     t.string   "impressionable_type"

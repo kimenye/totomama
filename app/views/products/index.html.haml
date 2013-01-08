@@ -18,7 +18,10 @@
           -#%td= product.description
           %td= product.price
           %td= product.rating
-          %td= product.category.name
+          - if !product.category.nil?
+            %td= product.category.name
+          - else
+            %td
           %td= link_to 'Show', product
           %td= link_to 'Edit', edit_product_path(product)
           %td= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }
