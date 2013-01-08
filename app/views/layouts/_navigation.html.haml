@@ -2,8 +2,15 @@
   %ul.nav-bar.custom
     - @categories.each_with_index do |category, i|
       %li.has-flyout
-        %a{:href => "#"}
+        %a{:href => '#'}
           = category[:stage].name
+        %a{:href => '#', :class => 'flyout-toggle'}
+        - if !category[:categories].empty?
+          %ul{:class => 'flyout'}
+            - category[:categories].each do |cat|
+              %li
+                %a{:href => '#'}
+                  = cat.name
         -#.flyout.menu-flyout
           .product-flyout-content
             .row
