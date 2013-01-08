@@ -17,7 +17,8 @@ class ApplicationController < ActionController::Base
     @categories = []
     stages.each do |s|
       @categories << {
-          :stage => s
+          :stage => s,
+          :categories => Category.find_all_by_stage_id(s.id)
       }
     end
   end
