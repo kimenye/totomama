@@ -3,7 +3,8 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    type = params[:type].nil? ? "Item" : params[:type]
+    @products = Product.where(:type => type)
 
     respond_to do |format|
       format.html # index.html.erb

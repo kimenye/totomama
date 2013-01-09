@@ -35,10 +35,8 @@
             %a{:href=>"#"} Shops
             %ul.dropdown
               %li
-                =link_to "Show Shops", products_path
-                -#link_to "Articles", articles_path, :id => "news", :class => "article"
+                =link_to "Show Shops", shop_list_path
               %li
-                -#=link_to "New Shop", new_product_path, :type => "shop"
                 =link_to "New Shop", "/products/new?type=Shop"
           %li.has-dropdown
             %a{:href => "#"} Articles
