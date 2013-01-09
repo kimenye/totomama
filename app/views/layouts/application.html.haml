@@ -8,6 +8,8 @@
         = javascript_include_tag "application"
         = csrf_meta_tags
         = yield(:head)
+        = yield(:scripts)
+        = stylesheet_link_tag 'gmaps4rails'
   %body{:class => "#{controller_name} #{action_name}"}
     #fb-root
     :javascript
