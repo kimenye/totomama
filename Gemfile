@@ -34,6 +34,5 @@ gem 'paperclip'
 gem 'aws-sdk'
 gem "better_errors", ">= 0.3.2", :group => :development
 gem "binding_of_caller", ">= 0.6.8", :group => :development
-gem 'gmaps4rails'
 gem 'ckeditor'
 gem 'mercury-rails'

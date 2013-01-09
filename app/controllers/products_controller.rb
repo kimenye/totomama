@@ -23,7 +23,6 @@ class ProductsController < ApplicationController
 
     if @product.type == "Shop"
       shop = Shop.find(params[:id])
-      @map = shop.to_gmaps4rails
     end
 
     respond_to do |format|

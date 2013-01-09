@@ -59,18 +59,18 @@
     .row
       .six.columns
         = f.label :address
-        = f.text_field :address
-        %input{:type=>"button", :value => "Find Lat/Lon", :id => "geolocate" }
+        = f.text_field :address, :class => "eight pull-left"
+        %input.button.pull-right{:type=>"button", :value => "Find Lat/Lon", :id => "geolocate" }
       .six.columns
     .row
       .six.columns
-        = f.label :lat
-        = f.text_field :lat
+        = f.label :lat, "Latitude"
+        = f.text_field :lat, :class => "eight"
       .six.columns
     .row
       .six.columns
-        = f.label :lon
-        = f.text_field :lon
+        = f.label :lon, "Longitude"
+        = f.text_field :lon, :class => "eight"
       .six.columns
   .row
     .twelve.columns

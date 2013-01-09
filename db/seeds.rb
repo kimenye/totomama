@@ -37,6 +37,6 @@ bottle = Item.find_or_create_by_name_and_category_id_and_description_and_rating(
 
 puts "Created #{Item.all.length} items"
 
-bottle = Shop.find_or_create_by_name_and_description_and_lat_and_lon_and_address('Stokke', " High quality baby products and accessories.", -1.298293, 36.762872, "Ground Floor, Junction Mall, Ngong Rd")
+bottle = Shop.find_or_create_by_name_and_description_and_lat_and_lon_and_address_and_rating('Stokke Baby Products', " High quality baby products and accessories.", -1.298293, 36.762872, "Ground Floor, Junction Mall, Ngong Rd", 4)
 
 puts "Created #{Shop.all.length} shops"
