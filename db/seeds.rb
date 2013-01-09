@@ -33,7 +33,7 @@ bottles = Category.find_or_create_by_name_and_stage_id_and_order('Milk Bottles',
 
 puts "Created #{Category.all.length} categories"
 
-bottle = Item.find_or_create_by_name_and_category_id_and_description('Avent Natural Bottle', bottles.id, "A bottle that's easy to clean is sure to grab a mom's attention." )
+bottle = Item.find_or_create_by_name_and_category_id_and_description_and_rating('Avent Natural Bottle', bottles.id, "A bottle that's easy to clean is sure to grab a mom's attention.",3)
 
 puts "Created #{Item.all.length} items"
 
