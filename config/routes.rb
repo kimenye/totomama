@@ -1,4 +1,9 @@
 Totomama::Application.routes.draw do
+  resources :articles
+
+
+  mount Ckeditor::Engine => '/ckeditor'
+
   devise_for :admins
 
   resources :stages
