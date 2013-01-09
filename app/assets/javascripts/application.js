@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require foundation
 //= require ckeditor/init
-//= require_tree .
+//= require home
+//= require products

@@ -1,4 +1,6 @@
 Totomama::Application.routes.draw do
+  mount Mercury::Engine => '/'
+
   resources :articles
 
 
