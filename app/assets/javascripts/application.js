@@ -16,3 +16,4 @@
 //= require ckeditor/init
 //= require home
 //= require products
+//= require_tree .
