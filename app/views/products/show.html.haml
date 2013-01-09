@@ -92,7 +92,7 @@
               %p
                 = @product.address
               .shop_location
-                = gmaps({"markers" => {"data" => @map}, "map_options" => {"type" => "ROADMAP", "zoom" => 12, "auto_adjust" => true}})
+                = gmaps({"markers" => {"data" => @map}, "map_options" => {"type" => "ROADMAP", "zoom" => 10, "auto_adjust" => true}})
     - if !@cross_sell_products.empty?
       .row.header
         .twelve.columns
