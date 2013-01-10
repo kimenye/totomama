@@ -17,7 +17,7 @@
       = f.label :description
       = f.text_area :description
     .four.columns
-      - if @product.type != "Shop"
+      - if @product.type != "Shop" && @product.type != "Event"
         = f.label :price
         .row.collapse
           .four.columns
@@ -71,6 +71,29 @@
       .six.columns
         = f.label :lon
         = f.text_field :lon
+      .six.columns
+  - if @product.type == "Event"
+    %input{:type=>"hidden", :value => "Event", :name => "type" }
+    .row
+      .six.columns
+        = f.label :address
+        = f.text_field :address
+        %input{:type=>"button", :value => "Find Lat/Lon", :id => "geolocate" }
+      .six.columns
+    .row
+      .six.columns
+        = f.label :lat
+        = f.text_field :lat
+      .six.columns
+    .row
+      .six.columns
+        = f.label :lon
+        = f.text_field :lon
+      .six.columns
+    .row
+      .six.columns
+        = f.label :time
+        = f.text_field :time
       .six.columns
   .row
     .twelve.columns

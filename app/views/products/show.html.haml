@@ -19,7 +19,7 @@
               %a{:href => "#productDescription"} Description
             %dd
               %a{:href => "#productReviews"} Reviews
-            - if @product.type == "Shop"
+            - if @product.type == "Shop" || @product.type == "Event"
               %dd
                 %a{:href => '#shopLocation'} Location
           %ul.tabs-content.contained

@@ -35,5 +35,9 @@
       .two.columns
         %h5
           %a{:href=> "#"} See More +
+    .row
+      .twelve.columns
+        - @popular_events.each_with_index do |product, i|
+          = render :partial => "layouts/product", :locals => { :product => product, :last => i== @popular_events.length - 1 }
 
   = render "layouts/sidebar"
