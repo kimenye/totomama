@@ -54,6 +54,8 @@ function getRatingValue() {
 function getGeoValues(address) {
     var geocoder = new google.maps.Geocoder();
 
+    //TODO: Error message for when there is no results found...
+
     geocoder.geocode( { 'address': address}, function(results, status) {
 
         if (status == google.maps.GeocoderStatus.OK) {

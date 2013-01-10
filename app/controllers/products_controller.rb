@@ -3,7 +3,8 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    type = params[:type].nil? ? "Item" : params[:type]
+    @products = Product.where(:type => type)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -22,10 +23,8 @@ class ProductsController < ApplicationController
 
     if @product.type == "Shop"
       shop = Shop.find(params[:id])
-      @map = shop.to_gmaps4rails
     elsif @product.type == "Event"
       event = Event.find(params[:id])
-      @map = event.to_gmaps4rails
     end
 
     respond_to do |format|

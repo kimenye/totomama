@@ -20,7 +20,7 @@ gem "zurb-foundation", ">= 3.2.3", :group => :assets
 gem "quiet_assets", ">= 1.0.1", :group => :development
 gem "figaro", ">= 0.5.0"
 group :development do
-  #gem "thin"
+  gem "thin"
   gem 'sqlite3'
 end
 
@@ -34,5 +34,5 @@ gem 'paperclip'
 gem 'aws-sdk'
 gem "better_errors", ">= 0.3.2", :group => :development
 gem "binding_of_caller", ">= 0.6.8", :group => :development
-gem 'gmaps4rails'
 gem 'ckeditor'
+gem 'mercury-rails'

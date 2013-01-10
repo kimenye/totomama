@@ -1,4 +1,6 @@
 Totomama::Application.routes.draw do
+  mount Mercury::Engine => '/'
+
   resources :articles
 
 
@@ -18,6 +20,9 @@ Totomama::Application.routes.draw do
   root :to => "home#index"
 
   match 'administration' => 'admin#index', :as => :admin_area
+
+  match 'shops' => 'products#index', :as => :shop_list, :defaults => { :type => 'Shop' }
+  match 'events' => 'products#index', :as => :event_list, :defaults => { :type => 'Event' }
 
   get '/channel.html' => proc {
     [
