@@ -287,3 +287,20 @@ li.top {
   text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
 }
 
+#moreResults {
+  padding-top: 10px;
+  margin:0;
+}
+
+#moreResults li {
+  list-style-type:none;
+  padding: 5px;
+  border-bottom: 1px black dashed;
+}
+
+#moreResults .alternate {
+  background-color: #98CED4;
+}
+
+
+
