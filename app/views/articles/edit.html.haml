@@ -1,7 +1,11 @@
-%h1 Editing article
+= render 'articles/nav'
+.row
+  .twelve.columns
+    %h3 Editing Article
 
 = render 'form'
 
-= link_to 'Show', @article
-\|
-= link_to 'Back', articles_path
+.row
+  = link_to 'Show', @article
+  \|
+  = link_to 'Back', articles_path
