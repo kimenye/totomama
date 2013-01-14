@@ -8,12 +8,4 @@ $(document).ready(function() {
     });
 
     $('.rating-readonly :radio').attr('disabled', 'disabled');
-
-    $('#search_bar').keypress(function(event) {
-        var keycode = (event.keyCode ? event.keyCode : event.which);
-        if(keycode == '13') {
-            var term = $('#search_bar').val()
-            $.get("/search", { term: term } );
-        }
-    });
 });

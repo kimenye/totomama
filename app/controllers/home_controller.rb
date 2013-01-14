@@ -9,9 +9,9 @@ class HomeController < ApplicationController
   #GET /search
   def search
     product_categories
-    term = params[:term]
+    term = params[:search]
     @matching_products = Item.where('name LIKE ? or description LIKE ?', "%#{term}%", "%#{term}%").all
-    @matching_shops = Shop.where('name LIKE ? or description LIKE ?', "%#{term}%", "%#{term}%").all
+    @matching_shops = Shop.where('type = "Shop" and (name LIKE ? or description LIKE ?)', "%#{term}%", "%#{term}%").all
     @matching_events = Event.where('name LIKE ? or description LIKE ?', "%#{term}%", "%#{term}%").all
 
     respond_to do |format|
