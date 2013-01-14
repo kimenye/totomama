@@ -1,6 +1,14 @@
-.two.columns.summary{:class => (last == true ? "end" : "") }
-  %a.th{:href => product_path(product)}
-    = image_tag product.photo.url
-  %a{:href => product_path(product)}
-    = product.name
-  = render :partial => "layouts/rating_readonly", :locals => { :product => product }
+- if (size == 3)
+  .three.columns.summary{:class => (last == true ? "end" : "") }
+    %a.th{:href => product_path(product)}
+      = image_tag product.photo.url
+    %a{:href => product_path(product)}
+      = product.name
+    = render :partial => "layouts/rating_readonly", :locals => { :product => product }
+- else
+  .two.columns.summary{:class => (last == true ? "end" : "") }
+    %a.th{:href => product_path(product)}
+      = image_tag product.photo.url
+    %a{:href => product_path(product)}
+      = product.name
+    = render :partial => "layouts/rating_readonly", :locals => { :product => product }

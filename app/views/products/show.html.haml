@@ -101,7 +101,7 @@
       .row
         .twelve.columns
           - @cross_sell_products.each_with_index do |product, i|
-            = render :partial => "layouts/product", :locals => { :product => product, :last => i == @cross_sell_products.length - 1 }
+            = render :partial => "layouts/product", :locals => { :product => product, :size => 2, :last => i == @cross_sell_products.length - 1 }
   = render "layouts/sidebar"
 
 - if @product.type == "Shop" || @product.type == "Event"
