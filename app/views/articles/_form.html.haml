@@ -7,9 +7,7 @@
           %li= msg
 
   .field
-    = f.label :admin
-    = f.text_field :admin
-  .field
+    = f.hidden_field :admin, :value => current_admin.id
     = f.label :title
     = f.text_field :title
   .field
@@ -19,9 +17,9 @@
     = f.cktext_area :content
   .field
     = f.label :status
-    = f.text_field :status
-  .field
-    = f.label :category
-    = f.text_field :category
+    = f.select :status, {"Draft" => "1", "Published" => "2"}
+  -#.field
+  -#  = f.label :category
+  -#  = f.collection_select :category_id, Category.all, :id, :name
   .actions
     = f.submit 'Save'

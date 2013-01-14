@@ -16,4 +16,6 @@
 //= require ckeditor/init
 //= require home
 //= require products
-//= require_tree .
+//= require jquery-ui-1.9.2.custom.min
+//= require jquery-ui-timepicker-addon
+//= require_tree
