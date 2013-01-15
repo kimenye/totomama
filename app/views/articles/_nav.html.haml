@@ -1,0 +1,13 @@
+-#.row
+  .twelve.columns
+    %nav.top-bar
+      %ul
+        %li.name
+          %h1
+            %a{:href => articles_path} Articles
+        %li.toggle-topbar
+          %a{:href => "#"}
+      %section
+        %ul.left
+          %li
+            = link_to 'New Article', new_article_path

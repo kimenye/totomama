@@ -230,7 +230,7 @@ li.top {
 }
 
 .summary .rating-readonly:not(:checked) > label {
-  font-size: 130%;
+  font-size: 120%;
 }
 
 /* :not(:checked) is a filter, so that browsers that don’t support :checked don’t
@@ -286,4 +286,21 @@ li.top {
   color: #ea0;
   text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
 }
+
+#moreResults {
+  padding-top: 10px;
+  margin:0;
+}
+
+#moreResults li {
+  list-style-type:none;
+  padding: 5px;
+  border-bottom: 1px black dashed;
+}
+
+#moreResults .alternate {
+  background-color: #98CED4;
+}
+
+
 

@@ -24,6 +24,8 @@ Totomama::Application.routes.draw do
   match 'shops' => 'products#index', :as => :shop_list, :defaults => { :type => 'Shop' }
   match 'events' => 'products#index', :as => :event_list, :defaults => { :type => 'Event' }
 
+  match 'search' => 'home#search'
+
   get '/channel.html' => proc {
     [
         200,

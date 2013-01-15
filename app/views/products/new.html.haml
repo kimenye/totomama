@@ -3,6 +3,8 @@
   .twelve.columns
     - if @product.type == "Shop"
       %h3 New Shop
+    - elsif @product.type == "Event"
+      %h3 New Event
     - else
       %h3 New Product
 

@@ -8,4 +8,6 @@ $(document).ready(function() {
     });
 
     $('.rating-readonly :radio').attr('disabled', 'disabled');
+
+    $('#moreResults li:nth-child(odd)').addClass('alternate');
 });

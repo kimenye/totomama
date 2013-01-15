@@ -6,9 +6,18 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
 
+    @all_articles = Array.new
+
+    @articles.each do |article|
+      article_admin = Admin.find(article.admin_id).name
+      article_category = Category.find(article.category_id).name
+      article_info = {:article => article, :article_admin => article_admin, :article_category => article_category}
+      @all_articles.push(article_info)
+    end
+
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @articles }
+      format.json { render json: @all_articles }
     end
   end
 
@@ -16,6 +25,11 @@ class ArticlesController < ApplicationController
   # GET /articles/1.json
   def show
     @article = Article.find(params[:id])
+    @article_admin = Admin.find(@article.admin_id).name
+    @article_category = Category.find(@article.category_id).name
+
+    puts @article_admin
+    puts @article_category
 
     respond_to do |format|
       format.html # show.html.erb

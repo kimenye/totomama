@@ -23,6 +23,8 @@ class ProductsController < ApplicationController
 
     if @product.type == "Shop"
       shop = Shop.find(params[:id])
+    elsif @product.type == "Event"
+      event = Event.find(params[:id])
     end
 
     respond_to do |format|
@@ -37,6 +39,8 @@ class ProductsController < ApplicationController
     puts "#{params}"
     if params[:type] == "Shop"
       @product = Shop.new
+    elsif params[:type] == "Event"
+      @product = Event.new
     else
       @product = Product.new
     end
@@ -57,6 +61,8 @@ class ProductsController < ApplicationController
   def create
     if params[:type] == "Shop"
       @product = Shop.new(params[:product])
+    elsif params[:type] == "Event"
+      @product = Event.new(params[:product])
     else
       @product = Product.new(params[:product])
     end
