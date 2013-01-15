@@ -10,18 +10,18 @@
           %th Content
           %th Status
           %th Category
-          -#%th{:colspan => 3}
+          %th{:colspan => 3}
       %tbody
-      - @articles.each do |article|
+      - @all_articles.each do |article|
         %tr
-          %td= article.admin
-          %td= article.title
-          %td= article.content
-          %td= article.status
-          %td= article.category
-          %td= link_to 'Show', article
-          %td= link_to 'Edit', edit_article_path(article)
-          %td= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }
+          %td= article[:article_admin]
+          %td= article[:article].title
+          %td= article[:article].content
+          %td= article[:article].status
+          %td= article[:article_category]
+          %td= link_to 'Show', article[:article]
+          %td= link_to 'Edit', edit_article_path(article[:article])
+          %td= link_to 'Destroy', article[:article], method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
 .row

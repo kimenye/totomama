@@ -10,7 +10,7 @@
 
   .row
     .six.columns
-      = f.hidden_field :admin, :value => current_admin.id
+      = f.hidden_field :admin_id, :value => current_admin.id
       = f.label :title
       = f.text_field :title
   .row
@@ -23,9 +23,9 @@
     .six.columns
       = f.label :status
       = f.select :status, {"Draft" => "1", "Published" => "2"}
-  -#.field
-  -#  = f.label :category
-  -#  = f.collection_select :category_id, Category.all, :id, :name
+  .row
+    = f.label :category
+    = f.collection_select :category_id, Category.all, :id, :name
   .row
     .twelve.columns
     .actions
