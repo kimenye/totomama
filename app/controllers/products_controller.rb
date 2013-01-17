@@ -64,7 +64,7 @@ class ProductsController < ApplicationController
     elsif params[:type] == "Event"
       @product = Event.new(params[:product])
     else
-      @product = Product.new(params[:product])
+      @product = Item.new(params[:product])
     end
 
     respond_to do |format|
