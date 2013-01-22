@@ -20,13 +20,14 @@ gem "zurb-foundation", ">= 3.2.3", :group => :assets
 gem "quiet_assets", ">= 1.0.1", :group => :development
 gem "figaro", ">= 0.5.0"
 gem "thin"
-group :development do
-  gem 'sqlite3'
-end
+#group :development do
+#  gem 'sqlite3'
+#end
 
-group :production do
-  gem 'pg'
-end
+#group :production do
+#  gem 'pg'
+#end
+gem 'pg'
 gem 'devise'
 gem 'impressionist'
 gem 'friendly_id'
@@ -35,4 +36,5 @@ gem 'aws-sdk'
 gem "better_errors", ">= 0.3.2", :group => :development
 gem "binding_of_caller", ">= 0.6.8", :group => :development
 gem 'ckeditor'
-#gem 'mercury-rails'
+gem 'pry'
+gem 'pry-nav'

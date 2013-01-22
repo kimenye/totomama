@@ -17,15 +17,12 @@ class ProductsController < ApplicationController
   def show
     product_categories
     @product = Product.find(params[:id])
-    #impressionist(@product)
+
+    impressionist(@product)
+    @product.impressions_count = @product.impressionist_count
+    @product.save!
 
     @cross_sell_products = Product.where('category_id = ? and id != ?', @product.category_id, @product.id).limit(6)
-
-    if @product.type == "Shop"
-      shop = Shop.find(params[:id])
-    elsif @product.type == "Event"
-      event = Event.find(params[:id])
-    end
 
     respond_to do |format|
       format.html { render :layout => 'layouts/application'}

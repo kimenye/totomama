@@ -72,12 +72,6 @@ ActiveRecord::Schema.define(:version => 20130109150832) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
 
-  create_table "events", :force => true do |t|
-    t.datetime "time"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "impressions", :force => true do |t|
     t.string   "impressionable_type"
     t.integer  "impressionable_id"
@@ -124,7 +118,6 @@ ActiveRecord::Schema.define(:version => 20130109150832) do
     t.datetime "time"
   end
 
-  add_index "products", ["category_id"], :name => "index_products_on_category_id"
   add_index "products", ["slug"], :name => "index_products_on_slug"
 
   create_table "ratings", :force => true do |t|
