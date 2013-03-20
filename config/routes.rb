@@ -1,4 +1,7 @@
 Totomama::Application.routes.draw do
+  resources :leads
+
+
   #mount Mercury::Engine => '/'
 
   resources :articles
@@ -17,7 +20,7 @@ Totomama::Application.routes.draw do
 
   resources :categories
 
-  root :to => "home#index"
+  root :to => "leads#new"
 
   match 'administration' => 'admin#index', :as => :admin_area
 

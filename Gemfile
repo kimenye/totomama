@@ -20,9 +20,9 @@ gem "zurb-foundation", ">= 3.2.3", :group => :assets
 gem "quiet_assets", ">= 1.0.1", :group => :development
 gem "figaro", ">= 0.5.0"
 gem "thin"
-#group :development do
-#  gem 'sqlite3'
-#end
+group :development do
+  gem 'sqlite3'
+end
 
 #group :production do
 #  gem 'pg'
