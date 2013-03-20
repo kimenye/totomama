@@ -1,0 +1,116 @@
+!!!
+%html
+  %head
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+      %title= content_for?(:title) ? yield(:title) : t(:title)
+      %script{:type => "text/javascript", :src => "http://maps.google.com/maps/api/js?sensor=false" }
+      %meta{:content => content_for?(:description) ? yield(:description) : t(:description), :name => "description"}
+        = stylesheet_link_tag "application", :media => "all"
+        = javascript_include_tag "application"
+        = csrf_meta_tags
+        = yield(:head)
+        = yield(:scripts)
+  %body{:class => "#{controller_name} #{action_name}"}
+    #fb-root
+    :javascript
+      // Additional JS functions here
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '462061233858880', // App ID
+          channelUrl : '//localhost:3000/channel.html', // Channel File
+          status     : true, // check login status
+          cookie     : true, // enable cookies to allow the server to access the session
+          xfbml      : true  // parse XFBML
+        });
+
+        // Additional init code here
+        FB.getLoginStatus(function(response) {
+          if (response.status === 'connected') {
+            FB.api('/me', function(response) {
+                   window.user = response;
+                   console.log('Good to see you, ' + response.name + '.');
+                   enableReview();
+                 });
+
+          } else if (response.status === 'not_authorized') {
+            // not_authorized
+            disableReview();
+          } else {
+            // not_logged_in
+            disableReview();
+          }
+         });
+      };
+
+      // Load the SDK Asynchronously
+      (function(d){
+         var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement('script'); js.id = id; js.async = true;
+         js.src = "//connect.facebook.net/en_US/all.js";
+         ref.parentNode.insertBefore(js, ref);
+       }(document));
+    %header
+      .container.row
+        .twelve.columns
+          .three.columns
+            %a.logo-box{:href => root_url}
+          .nine.columns
+            .row
+              %nav.seven.columns.mini-top-nav.color
+                %ul
+                  %li
+                    %a{:href => "#"}
+                      %h5.subheader
+                        Link
+                  %li.divider
+                    |
+                  %li
+                    %a{:href => "#"}
+                      %h5.subheader
+                        Link
+                  %li.divider
+                    |
+                  %li
+                    %a{:href => "#"}
+                      %h5.subheader
+                        Link
+                  %li.divider
+                    |
+                  %li
+                    %a{:href => "#"}
+                      %h5.subheader
+                        Link
+                  %li.divider
+                    |
+                  %li
+                    %a{:href => "#"}
+                      %h5.subheader
+                        Link
+            .row
+              .nine.columns.search-bar
+                %form{:id => 'search_form', :action => '/search', :method => 'get'}
+                  %input{:type => "text", :name => "term", :placeholder => "What are you looking for?", :id => 'search_bar'}
+              .three.columns.social.color
+                %ul
+                  %li
+                    %a.pin
+                  %li
+                    %a.twt
+                  %li
+                    %a.fb
+
+        -#=render "layouts/navigation"
+    #main{:role => "main"}
+      = yield
+    %footer
+      .copyright.row
+        %hr.twelve.columns
+        .four.columns
+          %p Copyright &copy; 2013
+        .eight.columns
+          %ul.inline-list.right
+            %li
+              %a{:href => admin_area_path}
+                Administration
+    / ! end of #container

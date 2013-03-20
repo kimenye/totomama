@@ -1,4 +1,5 @@
 class LeadsController < ApplicationController
+  layout "landing"
   # GET /leads
   # GET /leads.json
   def index
