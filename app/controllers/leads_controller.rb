@@ -14,7 +14,7 @@ class LeadsController < ApplicationController
   # GET /leads/1
   # GET /leads/1.json
   def show
-    product_categories
+    #product_categories
     @lead = Lead.find(params[:id])
 
     respond_to do |format|
@@ -26,7 +26,7 @@ class LeadsController < ApplicationController
   # GET /leads/new
   # GET /leads/new.json
   def new
-    product_categories
+    #product_categories
     @lead = Lead.new
 
     respond_to do |format|

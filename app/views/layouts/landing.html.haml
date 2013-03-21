@@ -57,7 +57,7 @@
             %a.logo-box{:href => root_url}
           .nine.columns
             .row
-              %nav.seven.columns.mini-top-nav.color
+              -#%nav.seven.columns.mini-top-nav.color
                 %ul
                   %li
                     %a{:href => "#"}
@@ -88,7 +88,7 @@
                       %h5.subheader
                         Link
             .row
-              .nine.columns.search-bar
+              -#.nine.columns.search-bar
                 %form{:id => 'search_form', :action => '/search', :method => 'get'}
                   %input{:type => "text", :name => "term", :placeholder => "What are you looking for?", :id => 'search_bar'}
               .three.columns.social.color
