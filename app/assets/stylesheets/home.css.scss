@@ -11,13 +11,16 @@ a.logo-box{
   height: 115px;
 }
 
-.mini-top-nav {
+.row .mini-top-nav {
   float: right;
+
+  li {
+    margin-left: 14px;
+  }
 }
 
 .social li, .mini-top-nav li {
   float: right;
-  margin-left: 14px;
   list-style: none;
 }
 
@@ -43,7 +46,7 @@ a.logo-box{
 }
 
 .mini-top-nav .divider {
-  margin-top: 14px;
+  margin-top: 3px;
 }
 
 .search-bar input {

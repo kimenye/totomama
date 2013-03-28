@@ -53,12 +53,12 @@
        }(document));
     %header
       .container.row
-        .twelve.columns
-          .three.columns
+        .large-12.columns
+          .large-3.columns
             %a.logo-box{:href => root_url}
-          .nine.columns
+          .large-9.columns
             .row
-              %nav.seven.columns.mini-top-nav.color
+              %nav.large-7.columns.mini-top-nav.color
                 %ul
                   %li
                     %a{:href => "#"}
@@ -89,10 +89,10 @@
                       %h5.subheader
                         Link
             .row
-              .nine.columns.search-bar
+              .large-9.columns.search-bar
                 %form{:id => 'search_form', :action => '/search', :method => 'get'}
                   %input{:type => "text", :name => "term", :placeholder => "What are you looking for?", :id => 'search_bar'}
-              .three.columns.social.color
+              .large-3.columns.social.color
                 %ul
                   %li
                     %a.pin
@@ -106,10 +106,10 @@
       = yield
     %footer
       .copyright.row
-        %hr.twelve.columns
-        .four.columns
+        %hr.large-12.columns
+        .large-4.columns
           %p Copyright &copy; 2013
-        .eight.columns
+        .large-8.columns
           %ul.inline-list.right
             %li
               %a{:href => admin_area_path}
