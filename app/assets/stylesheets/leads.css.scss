@@ -1,3 +1,26 @@
 // Place all the styles related to the Leads controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.leads {
+
+   .main_form{
+     //background-color: red;
+     margin: 0 auto;
+     h4{ color: #46166b}
+   }
+  .social {
+    //background-color: red;
+  }
+
+  .field {
+      //background-color: red;
+      //width: 600px;
+      text-align: center;
+
+     .label{background-color: red;}
+
+  }
+
+}
