@@ -4,16 +4,16 @@
       .panel
         %h3 ADVERTISEMENT
 .row
-  .nine.columns
+  .large-9.columns
     .row.detail
-      .three.columns
+      .large-3.columns
         = image_tag @product.photo.url
         = render :partial => "layouts/rating_readonly", :locals => { :product => @product }
-      .nine.columns
+      .large-9.columns
         .twelve.columns
           %h5
             = @product.name
-        .twelve.columns
+        .large-12.columns
           %dl.tabs.contained
             %dd.active
               %a{:href => "#productDescription"} Description
@@ -28,13 +28,13 @@
                 = @product.description
             %li#productReviewsTab
               .row.login
-                .six.columns.centered
+                .large-6.columns.centered
                   %a#loginLink{:href => "#"}
                   %p (Sign in to rate this product)
               .row.review.user-review.hide
-                .two.columns
+                .large-2.columns
                   %h5 Rate
-                .five.columns
+                .large-5.columns
                   .rating
                     %input#slug{:type=>"hidden", :value => @product.slug }
                     %input#star5{:type => 'radio', :name => 'product[rating]', :value => '5'}
@@ -47,7 +47,7 @@
                       %label{:for => 'star2', :title => '2'} 2 Stars
                     %input#star1{:type => 'radio', :name => 'product[rating]', :value => '1'}
                       %label{:for => 'star1', :title => '1'} 1 Stars
-                .five.columns.social.color
+                .large-5.columns.social.color
                   %ul
                     %li
                       %a.pin
@@ -56,37 +56,37 @@
                     %li
                       %a.fb
               .row.your-rating.user-review.hide
-                .twelve.columns
+                .large-12.columns
                   .row
-                    .twelve.columns
+                    .large-12.columns
                       %h5 Add your review
                   .row
-                    .eleven.columns
+                    .large-11.columns
                       %textarea#my-rating{:rows => 5}
-                    .one.columns
+                    .large-1.columns
                   .row
-                    .eight.columns
-                    .four.columns
+                    .large-8.columns
+                    .large-4.columns
                       %a.button.radius#submitLink{}
                         Submit
                   .row
                     %br
               .row
-                .ten.columns
+                .large-10.columns
                   %h5 User Reviews
-                .two.columns
+                .large-2.columns
               .row
-                .twelve.columns
+                .large-12.columns
                   - @product.ratings.each do |review|
                     .row.divider
-                      .two.columns
+                      .large-2.columns
                         = image_tag "http://graph.facebook.com/#{review.user_id}/picture"
                         %p
                           = review.username
-                      .seven.columns
+                      .large-7.columns
                         %p
                           = review.description
-                      .three.columns.summary
+                      .large-3.columns.summary
                         = render :partial => "layouts/rating_readonly_review", :locals => { :rating => review }
             %li#shopLocationTab
               %p
@@ -96,10 +96,10 @@
                   #map
     - if !@cross_sell_products.empty?
       .row.header
-        .twelve.columns
+        .large-12.columns
           %h5 You might also like
       .row
-        .twelve.columns
+        .large-12.columns
           - @cross_sell_products.each_with_index do |product, i|
             = render :partial => "layouts/product", :locals => { :product => product, :size => 2, :last => i == @cross_sell_products.length - 1 }
   = render "layouts/sidebar"

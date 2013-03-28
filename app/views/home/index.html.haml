@@ -1,42 +1,42 @@
 .row
-  .twelve.columns.ad
+  .large-12.columns.ad
     .row{"data-mercury" => "full"}
       .panel
         %h3 ADVERTISEMENT
 .row
-  .nine.columns
+  .large-9.columns
     .row.header
-      .ten.columns
+      .large-10.columns
         %h5 Most Popular Products
-      .two.columns
+      .large-2.columns
         %h5
           %a{:href=> "#"} See More +
     .row
-      .twelve.columns
+      .large-12.columns
         - @popular_products.each_with_index do |product, i|
           = render :partial => "layouts/product", :locals => { :product => product, :size => 2, :last => i== @popular_products.length - 1 }
     .row
       %br
     .row.header
-      .ten.columns
+      .large-10.columns
         %h5 Most Popular Shops
-      .two.columns
+      .large-2.columns
         %h5
           %a{:href=> "#"} See More +
     .row
-      .twelve.columns
+      .large-12.columns
         - @popular_shops.each_with_index do |product, i|
           = render :partial => "layouts/product", :locals => { :product => product, :size => 2, :last => i== @popular_shops.length - 1 }
     .row
       %br
     .row.header
-      .ten.columns
+      .large-10.columns
         %h5 Most Popular Events
-      .two.columns
+      .large-2.columns
         %h5
           %a{:href=> "#"} See More +
     .row
-      .twelve.columns
+      .large-12.columns
         - @popular_events.each_with_index do |product, i|
           = render :partial => "layouts/product", :locals => { :product => product, :size => 2, :last => i== @popular_events.length - 1 }
 
