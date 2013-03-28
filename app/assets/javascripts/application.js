@@ -19,3 +19,4 @@
 //= require jquery-ui-1.9.2.custom.min
 //= require jquery-ui-timepicker-addon
 //= require_tree
+$(document).foundation();
