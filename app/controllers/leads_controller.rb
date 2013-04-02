@@ -3,8 +3,8 @@ class LeadsController < ApplicationController
   # GET /leads
   # GET /leads.json
   def index
+    #product_categories
     @leads = Lead.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @leads }
@@ -30,7 +30,7 @@ class LeadsController < ApplicationController
     @lead = Lead.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html # new.html.erb   why is this commented out, why do we want to render json instead of html.erb
       format.json { render json: @lead }
     end
   end
