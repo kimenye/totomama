@@ -1,7 +1,7 @@
 = form_for @article do |f|
   - if @article.errors.any?
     .row
-      .twelve.columns
+      .large-12.columns
         #error_explanation
           %h2= "#{pluralize(@article.errors.count, "error")} prohibited this article from being saved:"
           %ul
@@ -9,24 +9,24 @@
               %li= msg
 
   .row
-    .six.columns
+    .large-6.columns
       = f.hidden_field :admin_id, :value => current_admin.id
       = f.label :title
       = f.text_field :title
   .row
-    .six.columns
+    .large-6.columns
       = f.label :content
       -#= f.text_area :content
         <%= form.cktext_area :content, :value => "Default value", :id => "sometext" %>
       = f.cktext_area :content
   .row
-    .six.columns
+    .large-6.columns
       = f.label :status
       = f.select :status, {"Draft" => "1", "Published" => "2"}
   .row
     = f.label :category
     = f.collection_select :category_id, Category.all, :id, :name
   .row
-    .twelve.columns
+    .large-12.columns
     .actions
       = f.submit 'Save'

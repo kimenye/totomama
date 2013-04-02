@@ -12,20 +12,20 @@
   %body{:class => "#{controller_name} #{action_name}"}
     %header
       .container.row
-        .twelve.columns
-          .three.columns
+        .large-12.columns
+          .large-3.columns
             %a.logo-box{:href => root_url}
-          .nine.columns
+          .large-9.columns
     #main{:role => "main"}
       - if admin_signed_in?
         =render "layouts/admin_navigation"
       = yield
     %footer
       .copyright.row
-        %hr.twelve.columns
+        %hr.large-12.columns
         .four.columns
           %p Copyright &copy; 2013
-        .eight.columns
+        .large-8.columns
           %ul.inline-list.right
             %li
               - if admin_signed_in?

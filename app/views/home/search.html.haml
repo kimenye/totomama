@@ -1,10 +1,10 @@
 .row
-  .twelve.columns.ad
+  .large-12.columns.ad
     .row{"data-mercury" => "full"}
       .panel
         %h3 ADVERTISEMENT
 .row
-  .three.columns
+  .large-3.columns
     - if !@related_search.empty?
       .row.header
         %h5 You might also like
@@ -17,58 +17,58 @@
       -#%li Item 000
       -#%li Item
       -#%li Another long name
-  .six.columns
+  .large-6.columns
     .ad
       .panel
         %h5 ADVERTISEMENT
     - if !@matching_products.empty?
       .row.header
-        .ten.columns
+        .large-10.columns
           %h5 Products
         .one.columns
           %h5
             %a{:href=> "#"} +
       .row
-        .twelve.columns
+        .large-12.columns
           - @matching_products_limited.each_with_index do |product, i|
             = render :partial => "layouts/product", :locals => { :product => product, :size => 3, :last => i== @matching_products_limited.length - 1 }
       .row
         %br
     - if !@matching_shops.empty?
       .row.header
-        .ten.columns
+        .large-10.columns
           %h5 Shops
-        .one.columns
+        .large-1.columns
           %h5
             %a{:href=> "#"} +
       .row
-        .twelve.columns
+        .large-12.columns
           - @matching_shops_limited.each_with_index do |product, i|
             = render :partial => "layouts/product", :locals => { :product => product, :size => 3, :last => i== @matching_shops_limited.length - 1 }
       .row
         %br
     - if !@matching_events.empty?
       .row.header
-        .ten.columns
+        .large-10.columns
           %h5 Events
-        .one.columns
+        .large-1.columns
           %h5
             %a{:href=> "#"} +
       .row
-        .twelve.columns
+        .large-12.columns
           - @matching_events_limited.each_with_index do |product, i|
             = render :partial => "layouts/product", :locals => { :product => product, :size => 3, :last => i== @matching_events_limited.length - 1 }
       .row
         %br
     - if !@matching_articles.empty?
       .row.header
-        .ten.columns
+        .large-10.columns
           %h5 Articles
-        .one.columns
+        .large-1.columns
           %h5
             %a{:href=> "#"} +
       .row
-        .twelve.columns
+        .large-12.columns
           - @matching_articles_limited.each_with_index do |product, i|
             = render :partial => "layouts/product", :locals => { :product => product, :size => 3, :last => i== @matching_articles_limited.length - 1 }
 
