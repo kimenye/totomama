@@ -20,8 +20,8 @@ Totomama::Application.routes.draw do
 
   resources :categories
 
-  #root :to => "leads#new"
-  root :to => "home#index"
+  root :to => "leads#new"
+  #root :to => "home#index"
 
   match 'administration' => 'admin#index', :as => :admin_area
 
