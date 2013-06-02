@@ -52,54 +52,50 @@
          ref.parentNode.insertBefore(js, ref);
        }(document));
     %header
+      .strip
       .container.row
         .large-12.columns
-          .large-3.columns
-            %a.logo-box{:href => root_url}
-          .large-9.columns
-            .row
-              %nav.large-7.columns.mini-top-nav.color
-                %ul
-                  %li
-                    %a{:href => "#"}
-                      %h5.subheader
-                        Link
-                  %li.divider
-                    |
-                  %li
-                    %a{:href => "#"}
-                      %h5.subheader
-                        Link
-                  %li.divider
-                    |
-                  %li
-                    %a{:href => "#"}
-                      %h5.subheader
-                        Link
-                  %li.divider
-                    |
-                  %li
-                    %a{:href => "#"}
-                      %h5.subheader
-                        Link
-                  %li.divider
-                    |
-                  %li
-                    %a{:href => "#"}
-                      %h5.subheader
-                        Link
-            .row
-              .large-9.columns.search-bar
-                %form{:id => 'search_form', :action => '/search', :method => 'get'}
-                  %input{:type => "text", :name => "term", :placeholder => "What are you looking for?", :id => 'search_bar'}
-              .large-3.columns.social.color
-                %ul
-                  %li
-                    %a.pin
-                  %li
-                    %a.twt
-                  %li
-                    %a.fb
+          %nav.large-7.columns.mini-top-nav.color
+            %ul
+              %li
+                %a{:href => "#"}
+                  %h5.subheader
+                    Link
+              %li.divider
+                |
+              %li
+                %a{:href => "#"}
+                  %h5.subheader
+                    Link
+              %li.divider
+                |
+              %li
+                %a{:href => "#"}
+                  %h5.subheader
+                    Link
+              %li.divider
+                |
+              %li
+                %a{:href => "#"}
+                  %h5.subheader
+                    Link
+              %li.divider
+                |
+          .row.shop-banner
+            .large-12.columns
+              %img{:src => "/assets/shop-front.png", :href => root_url}
+          .row
+            .large-10.columns.search-bar
+              %form{:id => 'search_form', :action => '/search', :method => 'get'}
+              %input{:type => "text", :name => "term", :placeholder => "What are you looking for?", :id => 'search_bar'}
+            .large-2.columns.social.color
+              %ul
+                %li
+                  %a.pin
+                %li
+                  %a.twt
+                %li
+                  %a.fb
 
         =render "layouts/navigation"
     #main{:role => "main"}

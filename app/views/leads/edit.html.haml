@@ -1,7 +1,44 @@
-%h1 Editing lead
+.row
+  .large-12.columns
 
-= render 'form'
+    -#= render 'form'
+    = form_for @lead do |f|
+      - if @lead.errors.any?
+        #error_explanation
+          %h2= "#{pluralize(@lead.errors.count, "error")} prohibited this lead from being saved:"
+          %ul
+            - @lead.errors.full_messages.each do |msg|
+              %li= msg
+      .row
+        .large-12.columns.large-centered.form-bg
+          %br
+          %br
+          %br
+          %br
+          .large-6.columns.side-copy
+            %img{:src => "/assets/mother-baby.png"}
+            %h4 Editing Lead
+            %p Bla bla bla bla bla bla bla bla bla
+          .large-6.columns.main_form
+            .field
+              -#= f.label :name, :class => "dfd"
+              = f.text_field :name, :placeholder => "Your Name"
+            .field
+              -#= f.label :email
+              = f.text_field :email, :placeholder => "Your Email"
+            .field
+              -#= f.label :phone_number
+              = f.text_field :phone_number, :placeholder => "Your Phone Number"
+            .field
+              -#= f.label :category
+              = f.text_field :category, :placeholder => "Do you own a shop, sell baby stuff or just buying"
+            .field
+              -#= f.label :location
+              = f.text_field :location, :placeholder => "Where are you located"
+            .actions
+              = f.submit 'Save'
+          %br
 
-= link_to 'Show', @lead
-\|
-= link_to 'Back', leads_path
+    = link_to 'Index', @lead
+
+    = link_to 'Back', leads_path
