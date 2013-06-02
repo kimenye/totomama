@@ -7,7 +7,7 @@ header {
   .strip{
     height: 15px;
     background: url(/assets/strip.jpg) repeat-x left top;
-    margin-top: -27px;
+    margin: -27px 0px 20px 0px;
     width: 1400px;
   }
 }
@@ -32,7 +32,7 @@ a.logo-box{
 }
 
 .social{
-  margin: 10px 30px 0px 0px;
+  margin: 27px 0px 0px 0px;
 }
 
 .social li a{
@@ -326,20 +326,18 @@ li.top {
   position: relative;
   z-index: 1;
   //width: 80%;
-  height: 525px;
+  //height: 525px;
 }
 
 .shop-banner{
   position: relative;
-  margin-left: 55px;
-  z-index: 3;
   img {
     width: 100%;
   }
 }
 
-.leads-list{
-  margin: 0 auto;
+.admin-list{
+ width: 100%;
 }
 
 

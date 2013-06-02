@@ -1,27 +1,29 @@
-%h1 Listing leads
+.row
+  .large-12.columns
+    %h1 Listing leads
 
-%table.leads-list
-  %tr
-    %th Name
-    %th Email
-    %th Phone number
-    %th Category
-    %th Location
-    %th
-    %th
-    %th
+    %table.admin-list
+      %tr
+        %th Name
+        %th Email
+        %th Phone number
+        %th Category
+        %th Location
+        %th
+        %th
+        %th
 
-  - @leads.each do |lead|
-    %tr
-      %td= lead.name
-      %td= lead.email
-      %td= lead.phone_number
-      %td= lead.category
-      %td= lead.location
-      %td= link_to 'Show', lead
-      %td= link_to 'Edit', edit_lead_path(lead)
-      %td= link_to 'Destroy', lead, method: :delete, data: { confirm: 'Are you sure?' }
+      - @leads.each do |lead|
+        %tr
+          %td= lead.name
+          %td= lead.email
+          %td= lead.phone_number
+          %td= lead.category
+          %td= lead.location
+          %td= link_to 'Show', lead
+          %td= link_to 'Edit', edit_lead_path(lead)
+          %td= link_to 'Destroy', lead, method: :delete, data: { confirm: 'Are you sure?' }
 
-%br
+    %br
 
-= link_to 'New Lead', new_lead_path
+    = link_to 'New Lead', new_lead_path
