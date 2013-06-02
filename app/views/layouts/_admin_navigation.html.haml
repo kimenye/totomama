@@ -52,4 +52,11 @@
                 =link_to "Show Articles", articles_path
               %li
                 =link_to "New Article", new_article_path
+          %li.has-dropdown
+            %a{:href => "#"} Leads
+            %ul.dropdown
+              %li
+                =link_to "Show Leads", "/leads/"
+              %li
+                =link_to "New Lead", new_lead_path
 
