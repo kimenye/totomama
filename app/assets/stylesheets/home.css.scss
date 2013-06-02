@@ -26,7 +26,7 @@ a.logo-box{
 }
 
 .social{
-  margin: 10px 0px 0px 0px;
+  margin: 10px 30px 0px 0px;
 }
 
 .social li a{
@@ -313,11 +313,19 @@ li.top {
 }
 
 //Landing page
-              
-.home-pic{
-  background: url('/assets/mother-baby.png');
-  height: 249px;
-  width: 395px;
+.form-bg{
+  background: #E6E7E8;
+  padding: 50px 0px;
+  margin-top: -30px;
+  position: relative;
+  z-index: 1;
+  //width: 80%;
+  height: 525px;
+}
+
+.shop-banner{
+  position: relative;
+  z-index: 3;
 }
 
 

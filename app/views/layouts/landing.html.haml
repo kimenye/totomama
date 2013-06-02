@@ -53,21 +53,18 @@
     %header
       .container.row
         .large-12.columns
-          .large-3.columns
-            %a.logo-box{:href => root_url}
-          .large-9.columns
-
-
-            .row
-
-              .three.columns.social.color
-                %ul
-                  %li
-                    %a.pin
-                  %li
-                    %a.twt
-                  %li
+          .row
+            .large-9.columns
+            .large-3.columns.social.color
+              %ul
+                %li
+                  %a.pin
+                    %li
+                      %a.twt
+                    %li
                     %a.fb
+        .row.large-12.columns.large-centered.shop-banner
+          %img{:src => "/assets/shop-front.png"}
 
         -#=render "layouts/navigation"
     #main{:role => "main"}
