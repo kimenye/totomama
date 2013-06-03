@@ -29,6 +29,12 @@ class LeadsController < ApplicationController
     #product_categories
     @lead = Lead.new
 
+    @type_options = ["What type of business do you run?", "Retail Shop","Wholesale Shop", "Online Shop", "Individual", "Other"]
+
+    @categories = ["Category of Business", "Clothing",
+                   "Community& Government",
+                  "Education", "Entertainment & Media", "Food & Catering", "Health", "Products & Accessories", "Professional Services", "Shopping", "Transportation", "Other"]
+
     respond_to do |format|
       format.html # new.html.erb   why is this commented out, why do we want to render json instead of html.erb
       format.json { render json: @lead }
