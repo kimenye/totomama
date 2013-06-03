@@ -22,7 +22,7 @@
         .field
           = f.text_field :phone_number, :placeholder => "Your Phone Number"
         .field
-          = f.select :type, options_for_select(@type_options.collect{ |u| [u, u] }), :html => {:class => "medium"}
+          = f.select :business_type, options_for_select(@type_options.collect{ |u| [u, u] }), :html => {:class => "medium"}
         .field
           = f.select :category, options_for_select(@categories.collect{ |u| [u, u] }), :html => {:class => "medium"}
         .field

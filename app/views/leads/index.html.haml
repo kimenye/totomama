@@ -8,6 +8,7 @@
         %th Email
         %th Phone number
         %th Category
+        %th Type
         %th Location
         %th
         %th
@@ -19,6 +20,7 @@
           %td= lead.email
           %td= lead.phone_number
           %td= lead.category
+          %td= lead.business_type
           %td= lead.location
           %td= link_to 'Show', lead
           %td= link_to 'Edit', edit_lead_path(lead)
