@@ -80,7 +80,7 @@ module Totomama
     config.assets.initialize_on_precompile = false
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.2'
+    config.assets.version = '1.3'
 
     config.to_prepare do
       Devise::SessionsController.layout "admin"
