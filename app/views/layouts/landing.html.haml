@@ -61,12 +61,13 @@
               %ul
                 %li
                   %a.pin
-                    %li
-                      %a.twt
-                    %li
-                    %a.fb
+                %li
+                  %a.twt
+                %li
+                  %a.fb
         .row.large-12.columns.large-centered.shop-banner
-          %img{:src => "/assets/shop-front.png", :href => root_url}
+          %a{:href => root_url}
+            %img{:src => "/assets/shop-front.png"}
 
         -#=render "layouts/navigation"
     #main{:role => "main"}

@@ -83,7 +83,8 @@
                 |
           .row.shop-banner
             .large-12.columns
-              %img{:src => "/assets/shop-front.png", :href => root_url}
+              %a{:href => root_url}
+                %img{:src => "/assets/shop-front.png"}
           .row
             .large-10.columns.search-bar
               %form{:id => 'search_form', :action => '/search', :method => 'get'}
