@@ -13,87 +13,92 @@
         .twelve.columns
           %h5
             = @product.name
-        .large-12.columns
-          %dl.tabs.contained
-            %dd.active
-              %a{:href => "#productDescription"} Description
-            %dd
-              %a{:href => "#productReviews"} Reviews
+        .large-12.columns.product
+          .section-container.tabs{ "data-section" => "tabs" }
+            %section
+              %p.title{"data-section-title" => ""}
+                %a{:href => "#description"}
+                  Description
+              .content{"data-slug" => "description"}
+                %p
+                  = @product.description
+            %section
+              %p.title{"data-section-title" => ""}
+                %a{:href => "#"}
+                  Reviews
+              .content{"data-slug" => "reviews"}
+                .row.login
+                  .large-6.columns.large-centered
+                    %a#loginLink{:href => "#"}
+                    %p (Sign in to rate this product)
+                .row.review.user-review.hide
+                  .large-2.columns
+                    %h5 Rate
+                  .large-5.columns
+                    .rating
+                      %input#slug{:type=>"hidden", :value => @product.slug }
+                      %input#star5{:type => 'radio', :name => 'product[rating]', :value => '5'}
+                        %label{:for => 'star5', :title => '5'} 5 Stars
+                      %input#star4{:type => 'radio', :name => 'product[rating]', :value => '4'}
+                        %label{:for => 'star4', :title => '4'} 4 Stars
+                      %input#star3{:type => 'radio', :name => 'product[rating]', :value => '3'}
+                        %label{:for => 'star3', :title => '3'} 3 Stars
+                      %input#star2{:type => 'radio', :name => 'product[rating]', :value => '2'}
+                        %label{:for => 'star2', :title => '2'} 2 Stars
+                      %input#star1{:type => 'radio', :name => 'product[rating]', :value => '1'}
+                        %label{:for => 'star1', :title => '1'} 1 Stars
+                  .large-5.columns.social.color
+                    %ul
+                      %li
+                        %a.pin
+                      %li
+                        %a.twt
+                      %li
+                        %a.fb
+                .row.your-rating.user-review.hide
+                  .large-12.columns
+                    .row
+                      .large-12.columns
+                        %h5 Add your review
+                    .row
+                      .large-11.columns
+                        %textarea#my-rating{:rows => 5}
+                      .large-1.columns
+                    .row
+                      .large-8.columns
+                      .large-4.columns
+                        %a.button.radius#submitLink{}
+                          Submit
+                    .row
+                      %br
+                .row
+                  .large-10.columns
+                    %h5 User Reviews
+                  .large-2.columns
+                .row
+                  .large-12.columns
+                    - @product.ratings.each do |review|
+                      .row.divider
+                        .large-2.columns
+                          = image_tag "http://graph.facebook.com/#{review.user_id}/picture"
+                          %p
+                            = review.username
+                        .large-7.columns
+                          %p
+                            = review.description
+                        .large-3.columns.summary
+                          = render :partial => "layouts/rating_readonly_review", :locals => { :rating => review }
             - if @product.type == "Shop" || @product.type == "Event"
-              %dd#shopTab
-                %a{:href => '#shopLocation'} Location
-          %ul.tabs-content.contained
-            %li#productDescriptionTab.active
-              %p
-                = @product.description
-            %li#productReviewsTab
-              .row.login
-                .large-6.columns.centered
-                  %a#loginLink{:href => "#"}
-                  %p (Sign in to rate this product)
-              .row.review.user-review.hide
-                .large-2.columns
-                  %h5 Rate
-                .large-5.columns
-                  .rating
-                    %input#slug{:type=>"hidden", :value => @product.slug }
-                    %input#star5{:type => 'radio', :name => 'product[rating]', :value => '5'}
-                      %label{:for => 'star5', :title => '5'} 5 Stars
-                    %input#star4{:type => 'radio', :name => 'product[rating]', :value => '4'}
-                      %label{:for => 'star4', :title => '4'} 4 Stars
-                    %input#star3{:type => 'radio', :name => 'product[rating]', :value => '3'}
-                      %label{:for => 'star3', :title => '3'} 3 Stars
-                    %input#star2{:type => 'radio', :name => 'product[rating]', :value => '2'}
-                      %label{:for => 'star2', :title => '2'} 2 Stars
-                    %input#star1{:type => 'radio', :name => 'product[rating]', :value => '1'}
-                      %label{:for => 'star1', :title => '1'} 1 Stars
-                .large-5.columns.social.color
-                  %ul
-                    %li
-                      %a.pin
-                    %li
-                      %a.twt
-                    %li
-                      %a.fb
-              .row.your-rating.user-review.hide
-                .large-12.columns
-                  .row
-                    .large-12.columns
-                      %h5 Add your review
-                  .row
-                    .large-11.columns
-                      %textarea#my-rating{:rows => 5}
-                    .large-1.columns
-                  .row
-                    .large-8.columns
-                    .large-4.columns
-                      %a.button.radius#submitLink{}
-                        Submit
-                  .row
-                    %br
-              .row
-                .large-10.columns
-                  %h5 User Reviews
-                .large-2.columns
-              .row
-                .large-12.columns
-                  - @product.ratings.each do |review|
-                    .row.divider
-                      .large-2.columns
-                        = image_tag "http://graph.facebook.com/#{review.user_id}/picture"
-                        %p
-                          = review.username
-                      .large-7.columns
-                        %p
-                          = review.description
-                      .large-3.columns.summary
-                        = render :partial => "layouts/rating_readonly_review", :locals => { :rating => review }
-            %li#shopLocationTab
-              %p
-                = @product.address
-              .shop_location
-                .map_container
-                  #map
+              %section
+                %p.title{"data-section-title" => ""}
+                  %a{:href => "#location"}
+                    Location
+                .content{"data-slug" => "location"}
+                  %p
+                    = @product.address
+                  .shop_location
+                    .map_container
+                      #map
     - if !@cross_sell_products.empty?
       .row.header
         .large-12.columns

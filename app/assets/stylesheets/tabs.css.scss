@@ -1,0 +1,32 @@
+.product {
+
+  .section-container.tabs section.active .title, .section-container.tabs .section.active .title {
+    background-color: #65c8c6;
+    color: #ffffff;
+    margin-right: 20px;
+  }
+
+  .section-container.tabs section .title, .section-container.tabs .section .title {
+    background-color: #46166b;
+    color: #ffffff;
+    margin-right: 20px;
+  }
+
+  .section-container.tabs section .title, .section-container.tabs .section .title {
+    border: none;
+    border-radius: 5px 5px 0px 0px;
+  }
+
+  .section-container.tabs section .content, .section-container.tabs .section .content {
+    border-left: 1px solid #65c8c6;
+    border-bottom: 1px solid #65c8c6;
+    border-right: 1px solid #65c8c6;
+    border-top: 5px solid #65c8c6;
+    border-radius: 0px 5px 5px 5px;
+  }
+
+  .section-container section .title a, .section-container .section .title a, .section-container.auto section .title a, .section-container.auto .section .title a {
+    color: #ffffff;
+  }
+
+}
