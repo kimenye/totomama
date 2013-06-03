@@ -51,9 +51,6 @@ GEM
     childprocess (0.3.6)
       ffi (~> 1.0, >= 1.0.6)
     chunky_png (1.2.6)
-    ckeditor (3.7.3)
-      mime-types
-      orm_adapter
     cocaine (0.4.2)
     coderay (1.0.8)
     coffee-rails (3.2.2)
@@ -228,7 +225,6 @@ DEPENDENCIES
   better_errors (>= 0.3.2)
   binding_of_caller (>= 0.6.8)
   capybara (>= 2.0.1)
-  ckeditor
   coffee-rails (~> 3.2.1)
   compass-rails (>= 1.0.3)
   database_cleaner (>= 0.9.1)
