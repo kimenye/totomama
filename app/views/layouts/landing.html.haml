@@ -53,19 +53,17 @@
        }(document));
     %header
       .strip
-      .container.row
-        -#.large-12.columns.strip
-        .large-12.columns
-          .row
-            .large-9.columns
-            .large-3.columns.social.color
-              %ul
-                %li
-                  %a.pin{:href => "#"}
-                %li
-                  %a.twt{:href => "#"}
-                %li
-                  %a.fb{:href => "#"}
+      .container
+        .row
+          .large-9.columns
+          .large-3.columns.social.color
+            %ul
+              %li
+                %a.pin{:href => "#"}
+              %li
+                %a.twt{:href => "#"}
+              %li
+                %a.fb{:href => "#"}
         .row.large-12.columns.large-centered.shop-banner
           %a{:href => root_url}
             %img{:src => "/assets/shop-front.png"}
