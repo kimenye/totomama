@@ -1,0 +1,29 @@
+.top-nav {
+
+  .section-container.horizontal-nav {
+    background-color: #ffffff;
+    border: none;
+
+    section .title {
+      border: none;
+      border-right: 1px dashed #808080;
+
+      a {
+        width: 120px;
+        color: #46166b;
+        padding: 0.9375em 0.25em;
+        line-height: 1.05em;
+        min-height: 50px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        text-align: center;
+        white-space: normal;
+      }
+    }
+  }
+
+  .section-container section .title, .section-container .section .title, .section-container.auto section .title, .section-container.auto .section .title {
+    background-color: transparent;
+  }
+}

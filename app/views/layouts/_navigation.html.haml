@@ -1,35 +1,26 @@
-.large-12.columns
-  %ul.nav-bar.custom
+.large-12.columns.top-nav
+  .section-container.horizontal-nav{"data-section" => "horizontal-nav", "data-options" => "one_up: false;"}
     - @categories.each_with_index do |category, i|
-      %li.has-flyout
-        %a{:href => '#'}
-          = category[:stage].name
-        %a{:href => '#', :class => 'flyout-toggle'}
+      %section
+        %p.title{"data-section-title" => ""}
+          %a{:href => "#"}
+            = category[:stage].name
         - if !category[:categories].empty?
-          %ul{:class => 'flyout'}
-            - category[:categories].each do |cat|
-              %li
-                %a{:href => '#'}
-                  = cat.name
-        -#.flyout.menu-flyout
-          .product-flyout-content
-            .row
-              %ul.five.columns
-                %h5 Products
-                - category[:products].each do |product|
-                  %li
-                    = link_to product.name, product_path(product)
-            .row
-              .six.columns.ad-panel
-                .panel
-              .six.columns.ad-panel
-                .panel
-      %li.top
-    %li.has-flyout
-      %a The TotoMama Marketplace
-    %li.top
-    %li.has-flyout
-      %a Events and Activities
-    %li.top
-    %li.has-flyout
-      %a Getting the right help
+          .content{"data-section-content" => ""}
+            %ul.side-nav
+              - category[:categories].each do |cat|
+                %li
+                  %a{:href => '#'}
+                    = cat.name
+    %section
+      %p.title{"data-section-title" => ""}
+        %a{:href => "#"}
+          The TotoMama Marketplace
+    %section
+      %p.title{"data-section-title" => ""}
+        %a{:href => "#"}
+          Events and Activities
+    %section
+      %p.title{"data-section-title" => ""}
+        %a{:href => "#"}
+          Getting the right help
