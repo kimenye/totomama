@@ -1,13 +1,11 @@
 .row
   .large-12.columns
     %nav.top-bar
-      %ul
+      %ul.title-area
         %li.name
           %h1
             =link_to "Welcome #{current_admin.name}", admin_area_path
-        %li.toggle-topbar
-          %a{:href=>"#"}
-      %section
+      %secton.top-bar-section
         %ul.left
           %li.divider
             %li.has-dropdown
