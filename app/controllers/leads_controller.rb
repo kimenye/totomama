@@ -6,7 +6,7 @@ class LeadsController < ApplicationController
     #product_categories
     @leads = Lead.all
     respond_to do |format|
-      format.html # index.html.erb
+      format.html { render :layout => 'layouts/admin' }# index.html.erb
       format.json { render json: @leads }
     end
   end
@@ -38,6 +38,9 @@ class LeadsController < ApplicationController
   # GET /leads/1/edit
   def edit
     @lead = Lead.find(params[:id])
+    respond_to do |format|
+      format.html { render :layout => 'layouts/admin' }
+    end
   end
 
   # POST /leads

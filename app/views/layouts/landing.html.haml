@@ -3,6 +3,7 @@
   %head
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
       %title= content_for?(:title) ? yield(:title) : t(:title)
+      %link{:href => 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700&subset=latin,cyrillic-ext', :rel => "stylesheet", :type => "text/css" }
       %script{:type => "text/javascript", :src => "http://maps.google.com/maps/api/js?sensor=false" }
       %meta{:content => content_for?(:description) ? yield(:description) : t(:description), :name => "description"}
         = stylesheet_link_tag "application", :media => "all"
@@ -60,11 +61,11 @@
             .large-3.columns.social.color
               %ul
                 %li
-                  %a.pin
+                  %a.pin{:href => "#"}
                 %li
-                  %a.twt
+                  %a.twt{:href => "#"}
                 %li
-                  %a.fb
+                  %a.fb{:href => "#"}
         .row.large-12.columns.large-centered.shop-banner
           %a{:href => root_url}
             %img{:src => "/assets/shop-front.png"}

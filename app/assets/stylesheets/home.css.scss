@@ -1,6 +1,18 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  font-family: 'Open Sans', sans-serif;
+  h4{
+    font-weight: 700;
+    font-size: 20px;
+  }
+  p{
+    font-weight: 300;
+    font-size: 17px;
+  }
+
+}
 
 header {
   margin-top: 20px;
@@ -8,7 +20,7 @@ header {
     height: 15px;
     background: url(/assets/strip.jpg) repeat-x left top;
     margin: -27px 0px 20px 0px;
-    width: 1400px;
+    //width: 1400px;
   }
 }
 a.logo-box{
@@ -57,8 +69,9 @@ a.logo-box{
 }
 
 .search-bar input {
+  font-family: 'Open Sans', sans-serif;
   border: none;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 2em;
   height: 55px;
   border-radius: 18px;
@@ -93,10 +106,12 @@ ul.flyout li, .custom li ul li {
 }
 
 ul.flyout li a, .custom li ul li a {
+  font-family: 'Open Sans', sans-serif;
   background-color: #ffffff;
   font-size: 12px;
   padding: 10px 5px;
   border: 0px;
+  font-weight: 700;
 }
 
 ul.flyout li a, .custom li ul li a:hover {
@@ -105,9 +120,10 @@ ul.flyout li a, .custom li ul li a:hover {
 }
 
 .custom > li a {
+  font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   color: #46166b;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .custom .flyout {
@@ -129,6 +145,7 @@ ul.flyout li a, .custom li ul li a:hover {
 }
 
 .custom > li > a:first-child {
+  font-weight: 300;
   font-size: 13px;
 }
 
@@ -149,6 +166,7 @@ ul.flyout li a, .custom li ul li a:hover {
 .nav-bar li{
   height: 40px;
   border: none;
+  font-weight: 400;
 }
 
 li.top {
@@ -161,10 +179,12 @@ li.top {
   width: 116px;
   line-height: 20px;
   text-align: center;
+  font-weight: 400;
 }
 
 .nav-bar > li.has-flyout > a:first-child::after {
   content: normal;
+  font-weight: 300;
 }
 
 .nav-bar > li.has-flyout > a:first-child {
@@ -211,6 +231,7 @@ li.top {
   font-size: 12px;
   min-height: 35px;
   display: block;
+  font-weight: 300;
 }
 
 .summary a.th {
@@ -246,6 +267,7 @@ li.top {
 }
 
 .summary .rating-readonly:not(:checked) > label {
+  font-weight: 100;
   font-size: 120%;
 }
 
@@ -272,6 +294,7 @@ li.top {
   white-space:nowrap;
   cursor:pointer;
   font-size:200%;
+  font-weight: 100;
   line-height:1.2;
   color:#ddd;
   text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
@@ -320,13 +343,13 @@ li.top {
 
 //Landing page
 .form-bg{
-  //background: #E6E7E8;
   padding: 50px 0px;
   margin-top: -30px;
   position: relative;
   z-index: 1;
-  //width: 80%;
-  //height: 525px;
+  .side-copy{
+    padding-right: 20px;
+  }
 }
 
 .shop-banner{
@@ -339,6 +362,12 @@ li.top {
 .admin-list{
  width: 100%;
 }
+
+.field input {
+  background: #E6E7E8;
+  color:  #777;
+}
+
 
 
 
