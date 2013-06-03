@@ -23,4 +23,13 @@
 
   }
 
+  label.error {
+    display: none !important;
+  }
+
+  select.error {
+    border-color: #ff0000;
+    color: #ff0000;
+  }
+
 }

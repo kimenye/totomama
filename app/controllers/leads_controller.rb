@@ -29,9 +29,9 @@ class LeadsController < ApplicationController
     #product_categories
     @lead = Lead.new
 
-    @type_options = ["What type of business do you run?", "Retail Shop","Wholesale Shop", "Online Shop", "Individual", "Other"]
+    @type_options = ["Retail Shop","Wholesale Shop", "Online Shop", "Individual", "Other"]
 
-    @categories = ["Category of Business", "Clothing",
+    @categories = ["Clothing",
                    "Community& Government",
                   "Education", "Entertainment & Media", "Food & Catering", "Health", "Products & Accessories", "Professional Services", "Shopping", "Transportation", "Other"]
 

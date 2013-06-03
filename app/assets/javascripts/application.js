@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require foundation
 //= require ckeditor/init
+//= require jquery.maskedInput.js
+//= require jquery.validate.min.js
 //= require home
 //= require products
 //= require jquery-ui-1.9.2.custom.min
