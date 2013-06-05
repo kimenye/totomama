@@ -27,5 +27,10 @@
           = f.select :category, options_for_select(@categories.collect{ |u| [u, u] }),{:prompt => "Category of Business"}
         .field
           = f.text_field :location, :placeholder => "Where are you located", :required => "required"
+        .field.captcha
+          - if flash[:notice]
+            .notice
+              = flash[:notice]
+          = show_visual_captcha(:type => :horizontal)
         .actions
           = f.submit 'Save',  :class => "button medium"

@@ -1,4 +1,5 @@
 class LeadsController < ApplicationController
+  include VisualCaptcha::ControllerHelpers
   layout "landing"
   # GET /leads
   # GET /leads.json
@@ -23,17 +24,21 @@ class LeadsController < ApplicationController
     end
   end
 
+  def drop_downs
+    @type_options = ["Retail Shop","Wholesale Shop", "Online Shop", "Individual", "Other"]
+
+    @categories = ["Clothing",
+                   "Community& Government",
+                   "Education", "Entertainment & Media", "Food & Catering", "Health", "Products & Accessories", "Professional Services", "Shopping", "Transportation", "Other"]
+  end
+
   # GET /leads/new
   # GET /leads/new.json
   def new
     #product_categories
     @lead = Lead.new
 
-    @type_options = ["Retail Shop","Wholesale Shop", "Online Shop", "Individual", "Other"]
-
-    @categories = ["Clothing",
-                   "Community& Government",
-                  "Education", "Entertainment & Media", "Food & Catering", "Health", "Products & Accessories", "Professional Services", "Shopping", "Transportation", "Other"]
+    drop_downs
 
     respond_to do |format|
       format.html # new.html.erb   why is this commented out, why do we want to render json instead of html.erb
@@ -57,14 +62,21 @@ class LeadsController < ApplicationController
   # POST /leads.json
   def create
     @lead = Lead.new(params[:lead])
-
-    respond_to do |format|
-      if @lead.save
-        format.html { redirect_to thank_you_path, notice: 'Lead was successfully created.' }
-        format.json { render json: @lead, status: :created, location: @lead }
-      else
+    if !visual_captcha_valid?
+      drop_downs
+      respond_to do |format|
+        flash[:notice] = 'Error with the human test.'
         format.html { render action: "new" }
-        format.json { render json: @lead.errors, status: :unprocessable_entity }
+      end
+    else
+      respond_to do |format|
+        if @lead.save
+          format.html { redirect_to thank_you_path, notice: 'Lead was successfully created.' }
+          format.json { render json: @lead, status: :created, location: @lead }
+        else
+          format.html { render action: "new" }
+          format.json { render json: @lead.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
