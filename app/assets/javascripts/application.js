@@ -17,6 +17,7 @@
 //= require jquery.maskedInput.js
 //= require jquery.validate.min.js
 //= require home
+//= require visualcaptcha
 //= require products
 //= require jquery-ui-1.9.2.custom.min
 //= require jquery-ui-timepicker-addon
