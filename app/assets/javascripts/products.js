@@ -1,3 +1,67 @@
+google.maps.event.addDomListener(window, "load", function () {
+    //
+    // initialize map
+    //
+    var map = new google.maps.Map(document.getElementById("mapdiv"), {
+        center: new google.maps.LatLng(-1.299129, 36.762697),
+        zoom: 17,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+    //
+    // initialize marker
+    //
+    var marker = new google.maps.Marker({
+        position: map.getCenter(),
+        draggable: true,
+        map: map
+    });
+    //
+    // intercept map and marker movements
+    //
+    google.maps.event.addListener(map, "idle", function () {
+        marker.setPosition(map.getCenter());
+        $('#product_lat').val(map.getCenter().lat().toFixed(6));
+        $('#product_lon').val(map.getCenter().lng().toFixed(6));
+    });
+    google.maps.event.addListener(marker, "dragend", function (mapEvent) {
+        map.panTo(mapEvent.latLng);
+    });
+    //
+    // initialize geocoder
+    //
+    var geocoder = new google.maps.Geocoder();
+    google.maps.event.addDomListener(document.getElementById("geolocate"), "click", function (domEvent) {
+        if (domEvent.preventDefault) {
+            domEvent.preventDefault();
+        } else {
+            domEvent.returnValue = false;
+        }
+        geocoder.geocode({
+            address: document.getElementById("address").value
+        }, function (results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                var result = results[0];
+                document.getElementById("address").value = result.formatted_address;
+                if (result.geometry.viewport) {
+                    map.fitBounds(result.geometry.viewport);
+                }
+                else {
+                    map.setCenter(result.geometry.location);
+                }
+            } else if (status == google.maps.GeocoderStatus.ZERO_RESULTS) {
+                alert("Sorry, the geocoder failed to locate the specified address.");
+            } else {
+                alert("Sorry, the geocoder failed with an internal error.");
+            }
+        });
+    });
+});
+
+
+
+
+
+
 function disableReview() {
 }
 
@@ -51,21 +115,21 @@ function getRatingValue() {
     return value;
 }
 
-function getGeoValues(address) {
-    var geocoder = new google.maps.Geocoder();
-
-    //TODO: Error message for when there is no results found...
-
-    geocoder.geocode( { 'address': address}, function(results, status) {
-
-        if (status == google.maps.GeocoderStatus.OK) {
-            var latitude = results[0].geometry.location.lat();
-            var longitude = results[0].geometry.location.lng();
-            $('#product_lat').val(latitude);
-            $('#product_lon').val(longitude);
-        }
-    });
-}
+//function getGeoValues(address) {
+//    var geocoder = new google.maps.Geocoder();
+//
+//    //TODO: Error message for when there is no results found...
+//
+//    geocoder.geocode( { 'address': address}, function(results, status) {
+//
+//        if (status == google.maps.GeocoderStatus.OK) {
+//            var latitude = results[0].geometry.location.lat();
+//            var longitude = results[0].geometry.location.lng();
+//            $('#product_lat').val(latitude);
+//            $('#product_lon').val(longitude);
+//        }
+//    });
+//}
 
 $(document).ready(function() {
 
@@ -77,8 +141,8 @@ $(document).ready(function() {
         review();
     });
 
-    $('#geolocate').click(function() {
-        getGeoValues($('#product_address').val());
-    });
+//    $('#geolocate').click(function() {
+//        getGeoValues($('#product_address').val());
+//    });
 
 });

@@ -59,9 +59,12 @@
     .row
       .six.columns
         = f.label :address
-        = f.text_field :address, :class => "eight pull-left"
+        = f.text_field :address, :class => "eight pull-left", :id => "address"
         %input.button.pull-right{:type=>"button", :value => "Find Lat/Lon", :id => "geolocate" }
       .six.columns
+    .row
+      .six.columns
+        %div{'id' => 'mapdiv', 'style' => 'width:100%; height: 500px'}
     .row
       .six.columns
         = f.label :lat, "Latitude"
