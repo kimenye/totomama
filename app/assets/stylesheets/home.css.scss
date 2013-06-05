@@ -268,7 +268,7 @@ li.top {
 
 .summary .rating-readonly:not(:checked) > label {
   font-weight: 100;
-  font-size: 120%;
+  font-size: 100%;
 }
 
 /* :not(:checked) is a filter, so that browsers that don’t support :checked don’t
@@ -288,12 +288,12 @@ li.top {
 .rating-readonly:not(:checked) > label,
 .rating:not(:checked) > label {
   float:right;
-  width:1em;
+  width:1.1em;
   //padding:0 .1em;
   overflow:hidden;
   white-space:nowrap;
   cursor:pointer;
-  font-size:200%;
+  font-size:175%;
   font-weight: 100;
   line-height:1.2;
   color:#ddd;
