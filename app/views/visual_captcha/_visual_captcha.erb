@@ -1,0 +1,20 @@
+<!--<link rel="stylesheet" href="/assets/visualcaptcha.css" />-->
+<div class="eL-captcha clearfix <%= captcha_options[:type] %>">
+  <p class="eL-explanation <%= captcha_options[:type] %>">
+    Help us fight spam. Drag the <strong><%= challenge.answer.title %></strong> to the circle on the side.
+  </p>
+  <div class="eL-possibilities <%= captcha_options[:type] %> clearfix">
+    <% challenge.options.each do |option| %>
+        <img src="/assets/<%= option.image %>" class="vc-<%= option.encrypted %>" data-value="<%= option.encrypted %>" />
+    <% end %>
+  </div>
+  <div class="eL-where2go <%= captcha_options[:type] %> clearfix">
+  </div>
+</div>
+<!--<script src="/assets/visualcaptcha.js"></script>-->
+<script type="text/javascript">
+    window.vCVals = {
+        'f' : $('.eL-captcha').closest('form').attr('id'),
+        'n' : 'captcha-value'
+    }
+</script>
