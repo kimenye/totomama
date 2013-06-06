@@ -60,39 +60,26 @@
       .six.columns
         = f.label :address
         = f.text_field :address, :class => "eight pull-left", :id => "address"
-        %input.button.pull-right{:type=>"button", :value => "Find Lat/Lon", :id => "geolocate" }
+        %input.button.pull-right{:type=>"button", :value => "Find Location", :id => "geolocate" }
       .six.columns
     .row
       .six.columns
-        %div{'id' => 'mapdiv', 'style' => 'width:100%; height: 500px'}
-    .row
-      .six.columns
-        = f.label :lat, "Latitude"
-        = f.text_field :lat, :class => "eight"
-      .six.columns
-    .row
-      .six.columns
-        = f.label :lon, "Longitude"
-        = f.text_field :lon, :class => "eight"
-      .six.columns
+        %div.map_container{'id' => 'mapdiv', 'style' => 'width:100%; height: 500px'}
+        = f.hidden_field :lat
+        = f.hidden_field :lon
   - if @product.type == "Event"
     %input{:type=>"hidden", :value => "Event", :name => "type" }
     .row
       .six.columns
         = f.label :address
-        = f.text_field :address
-        %input{:type=>"button", :value => "Find Lat/Lon", :id => "geolocate" }
+        = f.text_field :address, :class => "eight pull-left", :id => "address"
+        %input.button.pull-right{:type=>"button", :value => "Find Location", :id => "geolocate" }
       .six.columns
     .row
       .six.columns
-        = f.label :lat
-        = f.text_field :lat
-      .six.columns
-    .row
-      .six.columns
-        = f.label :lon
-        = f.text_field :lon
-      .six.columns
+        %div.map_container{'id' => 'mapdiv', 'style' => 'width:100%; height: 500px'}
+        = f.hidden_field :lat
+        = f.hidden_field :lon
     .row
       .six.columns
         = f.label :time

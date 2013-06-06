@@ -20,8 +20,19 @@ google.maps.event.addDomListener(window, "load", function () {
     //
     google.maps.event.addListener(map, "idle", function () {
         marker.setPosition(map.getCenter());
-        $('#product_lat').val(map.getCenter().lat().toFixed(6));
-        $('#product_lon').val(map.getCenter().lng().toFixed(6));
+        var lat = map.getCenter().lat().toFixed(6);
+        var lon = map.getCenter().lng().toFixed(6);
+
+
+        $.ajax({
+            type: "POST",
+            url: "http://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lon + "&sensor=true"
+        }).done(function( msg ) {
+                $('#address').val(msg.results[0].formatted_address);
+            });
+
+        $('#product_lat').val(lat);
+        $('#product_lon').val(lon);
     });
     google.maps.event.addListener(marker, "dragend", function (mapEvent) {
         map.panTo(mapEvent.latLng);
