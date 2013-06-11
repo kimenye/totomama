@@ -48,7 +48,7 @@ $darkColor: #46166b;
   border-left: 1px solid $lightColor;
   border-bottom: 1px solid $lightColor;
   border-right: 1px solid $lightColor;
-  border-top: 5px solid $lightColor;
+  border-top: 7px solid $lightColor;
   border-radius: 0px 5px 5px 5px;
 }
 
@@ -135,6 +135,8 @@ $darkColor: #46166b;
   float: left;
 }
 
-.section-container section .title a {
-  padding: 0 !important;
+.products {
+  .section-container section .title a {
+    padding: 5px 15px;
+  }
 }

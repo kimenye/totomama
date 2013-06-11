@@ -3,13 +3,21 @@
   .section-container.tabs section.active .title, .section-container.tabs .section.active .title {
     background-color: #65c8c6;
     color: #ffffff;
-    margin-right: 20px;
+    display: block;
   }
 
   .section-container.tabs section .title, .section-container.tabs .section .title {
     background-color: #46166b;
     color: #ffffff;
-    margin-right: 20px;
+    display: block;
+  }
+
+  .section-container.tabs section:nth-child(2) .title {
+    margin-left: 20px;
+  }
+
+  .section-container.tabs section:nth-child(3) .title {
+    margin-left: 35px;
   }
 
   .section-container.tabs section .title, .section-container.tabs .section .title {
