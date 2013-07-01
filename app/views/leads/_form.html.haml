@@ -12,21 +12,59 @@
         %img{:src => "/assets/mother-baby.png"}
           %br
           %br
-          %p TotoMama is best place to find cool stuff for Toto and Mama
+          %p Do you want to reach parents and guardians across Kenya?  Welcome to Toto & Mama Online Directory where our members are your customers. 
+          %p We understand why you started your business and want to make it easier for your primary customers - expectant women, new parents, parents of babies, toddlers and older children - to find your business, products and services.
+          %h4 Why list with us?
+          %h6.subheading No Cost
+          %p We are offering you an opportunity to list your business for free on our website.
+          %h6.subheading Accessibility
+          %p Your business will easily be reachable just by a click of a button.
+          %h6.subheading Increased Business
+          %p A direct link from our website will help with the growth of traffic to your business.
+          %h6.subheading Feedback
+          %p You will enjoy real-time customer comments and reviews that will help you improve your business.
+          %h6.subheading Innovative Marketing
+          %p At Toto & Mama we have a dedicated team that will provide you with new and innovative ways to promote your business.
+          %h6.subheading Register Your Business With Us
+          %p For further information, email us on 
+          %a{:href => 'mailto:habari@totomama.co.ke'} habari@totomama.co.ke
       .large-6.columns.main_form
-        %h4 We are launching soon, please fill in the form below and we will get back to you
+        %h3 Register your business with us today
         .field
-          = f.text_field :name, :placeholder => "Your Name", :required => "required"
+          = f.text_field :name, :placeholder => "What is your Business/listing name", :required => "required"
         .field
-          = f.email_field :email, :placeholder => "Your Email", :required => "required"
+          =f.label :hours, "Operating Hours: 9:00am - 5:00pm"
+          = f.text_field :hours, :id => "hours", :placeholder => "Use the Slider to Select Time Range"
+        #slider-range
+        %br
         .field
-          = f.telephone_field :phone_number, :placeholder => "Your Phone Number", :required => "required"
+          = f.select :business_type, options_for_select(@type_options.collect{ |u| [u,u] }), {:prompt => 'What is the nature of your business', :required => "required"}
         .field
-          = f.select :business_type, options_for_select(@type_options.collect{ |u| [u,u] }), {:prompt => 'What type of business do you run?', :required => "required"}
+          = f.select :business_target, options_for_select(@target_options.collect{ |u| [u, u] }),{:prompt => "Who is your business target", :required => "required"}
         .field
-          = f.select :category, options_for_select(@categories.collect{ |u| [u, u] }),{:prompt => "Category of Business"}
+          = f.text_area :description, :placeholder => "Explain what your business is about", :required => "required"
+        %h4 Physical Address
         .field
-          = f.text_field :location, :placeholder => "Where are you located", :required => "required"
+          = f.text_field :physical_address_number, :placeholder => "Shop No./House No./Gate No./LR Plot No."
+        .field
+          = f.text_field :physical_address_floor, :placeholder => "Floor"
+        .field
+          = f.text_field :physical_address_building, :placeholder => "Building Name"
+        .field
+          = f.text_field :physical_address_street, :placeholder => "Street"
+        .field
+          = f.text_field :physical_address_city, :placeholder => "City/Town"
+        .field
+          = f.text_field :physical_address_county, :placeholder => "County"
+        %h4 Contact Details
+        .field
+          = f.text_field :postal_address_number, :placeholder => "Postcode - Postal Address"
+        .field
+          = f.telephone_field :phone_number, :placeholder => "Mobile No.", :required => "required"
+        .field
+          = f.email_field :email, :placeholder => "Email Address", :required => "required"
+        .field
+          = f.text_field :postal_address_county, :placeholder => "County"
         .field.captcha
           - if flash[:notice]
             .notice
@@ -34,3 +72,69 @@
           = show_visual_captcha(:type => :horizontal)
         .actions
           = f.submit 'Save',  :class => "button medium"
+
+:javascript
+
+  $(function() {
+
+    $("#slider-range").slider({
+          range: true,
+          min: 0,
+          max: 1440,
+          step: 15,
+          values: [600, 720],
+          slide: function (e, ui) {
+              var hours1 = Math.floor(ui.values[0] / 60);
+              var minutes1 = ui.values[0] - (hours1 * 60);
+
+              if (hours1.length == 1) hours1 = '0' + hours1;
+              if (minutes1.length == 1) minutes1 = '0' + minutes1;
+              if (minutes1 == 0) minutes1 = '00';
+              if (hours1 >= 12) {
+                  if (hours1 == 12) {
+                      hours1 = hours1;
+                      minutes1 = minutes1 + " PM";
+                  } else {
+                      hours1 = hours1 - 12;
+                      minutes1 = minutes1 + " PM";
+                  }
+              } else {
+                  hours1 = hours1;
+                  minutes1 = minutes1 + " AM";
+              }
+              if (hours1 == 0) {
+                  hours1 = 12;
+                  minutes1 = minutes1;
+              }
+
+
+
+              $( "#hours" ).val(hours1 + ':' + minutes1);
+
+              var hours2 = Math.floor(ui.values[1] / 60);
+              var minutes2 = ui.values[1] - (hours2 * 60);
+
+              if (hours2.length == 1) hours2 = '0' + hours2;
+              if (minutes2.length == 1) minutes2 = '0' + minutes2;
+              if (minutes2 == 0) minutes2 = '00';
+              if (hours2 >= 12) {
+                  if (hours2 == 12) {
+                      hours2 = hours2;
+                      minutes2 = minutes2 + " PM";
+                  } else if (hours2 == 24) {
+                      hours2 = 11;
+                      minutes2 = "59 PM";
+                  } else {
+                      hours2 = hours2 - 12;
+                      minutes2 = minutes2 + " PM";
+                  }
+              } else {
+                  hours2 = hours2;
+                  minutes2 = minutes2 + " AM";
+              }
+
+              $( "#hours" ).val(hours1 + ':' + minutes1 + " - " + hours2 + ':' + minutes2);
+          }
+      });
+
+  });

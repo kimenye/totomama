@@ -7,9 +7,8 @@
         %th Name
         %th Email
         %th Phone number
-        %th Category
+        %th Target
         %th Type
-        %th Location
         %th
         %th
 
@@ -18,9 +17,8 @@
           %td= lead.name
           %td= lead.email
           %td= lead.phone_number
-          %td= lead.category
+          %td= lead.business_target
           %td= lead.business_type
-          %td= lead.location
           %td= link_to 'Show', lead
           %td= link_to 'Destroy', lead, method: :delete, data: { confirm: 'Are you sure?' }
 

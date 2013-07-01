@@ -25,11 +25,17 @@ class LeadsController < ApplicationController
   end
 
   def drop_downs
-    @type_options = ["Retail Shop","Wholesale Shop", "Online Shop", "Individual", "Other"]
+    #@type_options = ["Retail Shop","Wholesale Shop", "Online Shop", "Individual", "Other"]
 
-    @categories = ["Clothing",
-                   "Community& Government",
-                   "Education", "Entertainment & Media", "Food & Catering", "Health", "Products & Accessories", "Professional Services", "Shopping", "Transportation", "Other"]
+    @target_options = ["Babies", "Toddlers", "Pre Schoolers", "School Age", "Pregnancy", "Postnatal", "Parents"]
+
+    @type_options = ["Activities (Indoor/Outdoor)", "Baby Clothes & Shoes", "Baby Equipment & Accessories", "Baby Feeding & Nutrition",
+                     "Child Birth", "Childcare, House-helps & Nannies", "Child Friendly Restaurants & Cafes", "Classes & Playgroups",
+                     "Diet & Fitness", "Educational Products & Services", "Entertainment, Party Supplies, Party Planners", "Events",
+                     "First Aid & Safety", "For Mum & Dad", "Furniture", "Government Agencies", "Health & Medical Centers", "Parenting Information",
+                     "Pregnancy, Antenatal & Postnatal Health", "Professionals & Consultants", "Maternity Clothes & Shoes", "Second Hand & Pre-loved",
+                     "Shops - High Streets", "Shops - Open Market", "Shops - Online", "Support Groups", "Toys & Gifts", "Websites and Resources", "Other"]
+
   end
 
   # GET /leads/new
