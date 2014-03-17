@@ -7,72 +7,121 @@
           %li= msg
   .row
     .large-12.columns.large-centered.form-bg
-      .large-6.columns.side-copy
-        %br
-        %img{:src => "/assets/mother-baby.png"}
-          %br
-          %br
-          %p Do you want to reach parents and guardians across Kenya?  Welcome to Toto & Mama Online Directory where our members are your customers. 
-          %p We understand why you started your business and want to make it easier for your primary customers - expectant women, new parents, parents of babies, toddlers and older children - to find your business, products and services.
-          %h4 Why list with us?
-          %h6.subheading No Cost
-          %p We are offering you an opportunity to list your business for free on our website.
-          %h6.subheading Accessibility
-          %p Your business will easily be reachable just by a click of a button.
-          %h6.subheading Increased Business
-          %p A direct link from our website will help with the growth of traffic to your business.
-          %h6.subheading Feedback
-          %p You will enjoy real-time customer comments and reviews that will help you improve your business.
-          %h6.subheading Innovative Marketing
-          %p At Toto & Mama we have a dedicated team that will provide you with new and innovative ways to promote your business.
-          %h6.subheading Register Your Business With Us
-          %p For further information, email us on 
-          %a{:href => 'mailto:habari@totomama.co.ke'} habari@totomama.co.ke
-      .large-6.columns.main_form
-        %h3 Register your business with us today
-        .field
-          = f.text_field :name, :placeholder => "What is your Business/listing name", :required => "required"
-        .field
-          =f.label :hours, "Operating Hours: 9:00am - 5:00pm"
-          = f.text_field :hours, :id => "hours", :placeholder => "Use the Slider to Select Time Range"
-        #slider-range
-        %br
-        .field
-          = f.select :business_type, options_for_select(@type_options.collect{ |u| [u,u] }), {:prompt => 'What is the nature of your business', :required => "required"}
-        .field
-          = f.select :business_target, options_for_select(@target_options.collect{ |u| [u, u] }),{:prompt => "Who is your business target", :required => "required"}
-        .field
-          = f.text_area :description, :placeholder => "Explain what your business is about", :required => "required"
-        %h4 Physical Address
-        .field
-          = f.text_field :physical_address_number, :placeholder => "Shop No./House No./Gate No./LR Plot No."
-        .field
-          = f.text_field :physical_address_floor, :placeholder => "Floor"
-        .field
-          = f.text_field :physical_address_building, :placeholder => "Building Name"
-        .field
-          = f.text_field :physical_address_street, :placeholder => "Street"
-        .field
-          = f.text_field :physical_address_city, :placeholder => "City/Town"
-        .field
-          = f.text_field :physical_address_county, :placeholder => "County"
-        %h4 Contact Details
-        .field
-          = f.text_field :postal_address_number, :placeholder => "Postcode - Postal Address"
-        .field
-          = f.telephone_field :phone_number, :placeholder => "Mobile No.", :required => "required"
-        .field
-          = f.email_field :email, :placeholder => "Email Address", :required => "required"
-        .field
-          = f.text_field :postal_address_county, :placeholder => "County"
-        .field.captcha
-          - if flash[:notice]
-            .notice
-              = flash[:notice]
-          = show_visual_captcha(:type => :horizontal)
-        .actions
-          = f.submit 'Save',  :class => "button medium"
-
+      %img{:src => "/assets/banner.jpg"}
+  .row
+    .large-12.columns.large-centered.form-bg
+      %h4 LIST YOUR BUSINESS WITH US
+      %p Do you want to reach parents and guardians across Kenya?  Welcome to Toto & Mama Online Directory where our members are your customers. 
+      %p We understand why you started your business and want to make it easier for your primary customers - expectant women, new parents, parents of babies, toddlers and older children - to find your business, products and services.
+  .row
+    %h4 Why list with us?
+    .large-6.columns
+      %h6 No Cost
+      %p We are offering you an opportunity to list your business for free on our website.
+    .large-6.columns
+      %h6 Accessibility
+      %p Your business will easily be reachable just by a click of a button.
+    .large-6.columns
+      %h6 Increased Business
+      %p A direct link from our website will help with the growth of traffic to your business.
+    .large-6.columns
+      %h6 Feedback
+      %p You will enjoy real-time customer comments and reviews that will help you improve your business.
+    .large-6.columns
+      %h6 Innovative Marketing
+      %p At Toto & Mama we have a dedicated team that will provide you with new and innovative ways to promote your business.
+    .large-6.columns
+      %h6 Register Your Business With Us
+      %p For further information, email us on 
+      %a{:href => 'mailto:habari@totomama.co.ke'} habari@totomama.co.ke
+  .row
+    .orbit-container
+      %ul.register-orbit.orbit-slides-container{"data-orbit" => ""}
+        %li{"data-orbit-slide" => "register-1"}
+          %h3 Register your business with us today
+          .large-6.columns.main_form
+            .row
+              .large-12.columns
+                .field
+                  = f.text_field :name, :placeholder => "What is your Business/listing name", :required => "required"
+            .row
+              .large-12.columns
+                .field
+                  =f.label :hours, "Operating Hours: 9:00am - 5:00pm"
+                  = f.text_field :hours, :id => "hours", :placeholder => "Use the Slider to Select Time Range"
+                  #slider-range
+                  %br
+            .row
+              .large-12.columns
+                .field
+                  = f.select :business_type, options_for_select(@type_options.collect{ |u| [u,u] }), {:prompt => 'What is the nature of your business', :required => "required"}
+            .row
+              .large-12.columns
+                .field
+                  = f.select :business_target, options_for_select(@target_options.collect{ |u| [u, u] }),{:prompt => "Who is your business target", :required => "required"}
+            .row
+              .large-12.columns
+                .field
+                  = f.text_area :description, :placeholder => "Explain what your business is about", :required => "required"
+                  %br
+                  %a.small.button{"data-orbit-link" => "register-2"}Next
+        %li{"data-orbit-slide" => "register-2"}
+          .large-6.columns.main_form
+            .row
+              .large-12.columns
+                .field
+                  = f.text_field :physical_address_number, :placeholder => "Shop No./House No./Gate No./LR Plot No."
+            .row
+              .large-12.columns
+                .field
+                  = f.text_field :physical_address_floor, :placeholder => "Floor"
+            .row
+              .large-12.columns  
+                .field
+                  = f.text_field :physical_address_building, :placeholder => "Building Name"
+            .row
+              .large-12.columns
+                .field
+                  = f.text_field :physical_address_street, :placeholder => "Street"
+            .row
+              .large-12.columns
+                .field
+                  = f.text_field :physical_address_city, :placeholder => "City/Town"
+            .row
+              .large-12.columns  
+                .field
+                  = f.text_field :physical_address_county, :placeholder => "County"
+            .row
+              .large-12.columns  
+                %h4 Contact Details
+                .field
+                  = f.text_field :postal_address_number, :placeholder => "Postcode - Postal Address"
+            .row
+              .large-12.columns  
+                .field
+                  = f.telephone_field :phone_number, :placeholder => "Mobile No.", :required => "required"
+            .row
+              .large-12.columns  
+                .field
+                  = f.email_field :email, :placeholder => "Email Address", :required => "required"
+            .row
+              .large-12.columns  
+                .field
+                  = f.text_field :postal_address_county, :placeholder => "County"
+            .row
+              .large-12.columns  
+                .field.captcha
+                  - if flash[:notice]
+                    .notice
+                      = flash[:notice]
+                  = show_visual_captcha(:type => :horizontal)
+            .row
+              .large-12.columns  
+                .actions
+                  = f.submit 'Save',  :class => "button medium"
+                  %br
+                  %a.small.button{"data-orbit-link" => "register-1"}Previous
+    
 :javascript
 
   $(function() {
