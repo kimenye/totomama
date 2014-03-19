@@ -17,7 +17,6 @@ gem "database_cleaner", ">= 0.9.1", :group => :test
 gem "email_spec", ">= 1.4.0", :group => :test
 gem "compass-rails", ">= 1.0.3", :group => :assets
 gem 'foundation-rails'
-gem 'mysql2'
 gem "quiet_assets", ">= 1.0.1", :group => :development
 gem "figaro", ">= 0.5.0"
 gem "thin"
@@ -26,7 +25,7 @@ group :development do
 end
 
 group :production do
- gem 'pg'
+ gem 'mysql2'
 end
 # gem 'pg'
 gem 'devise'
