@@ -8,7 +8,6 @@
       %meta{:content => content_for?(:description) ? yield(:description) : t(:description), :name => "description"}
         = stylesheet_link_tag "landing", :media => "all"
         = javascript_include_tag "application"
-        = javascript_include_tag "foundation/foundation.orbit"
         = csrf_meta_tags
         = yield(:head)
         = yield(:scripts)

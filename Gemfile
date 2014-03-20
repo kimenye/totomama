@@ -27,6 +27,7 @@ end
 group :production do
  gem 'mysql2'
 end
+gem 'activerecord-mysql2-adapter'
 # gem 'pg'
 gem 'devise'
 gem 'impressionist'
