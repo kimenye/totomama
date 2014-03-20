@@ -76,3 +76,51 @@
     }
   }
 }
+
+.btn-switch-slides {
+  font: bold 20px Arial;
+  text-decoration: none;
+  background-color: #75D1D1;
+  color: white;
+  padding: 10px 20px 10px 20px;
+}
+
+.register-link {
+  background-color: #75D1D1;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 133px;
+  margin: 0 0 0 -50PX;
+  border: 2px solid #fff
+}
+.register-link a{
+  text-align: center;
+  color: white;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  font-weight: 900;
+  display: block;
+  clear: both;
+  padding-TOP: 35PX;
+}
+
+.rope {
+  width: 1px;
+  height: 120px;
+  position: absolute;
+  left: 50%;
+  border-left: 2px solid gray;
+  top: 25px;
+}
+.magenta-bold {
+  color: #AA3C76;
+  font-weight: bold;
+}
+
+.bluish {
+  color: #512582;
+}

@@ -3,11 +3,17 @@ $(function() {
     $(document).foundation({
       orbit: {
         animation: 'slide',
-        timer_speed: 1000,
-        pause_on_hover: true,
-        animation_speed: 500,
-        navigation_arrows: true,
-        bullets: false
+        timer_speed: 0,
+        // pause_on_hover: true,
+        // animation_speed: 500,
+        timer: false,
+        slide_number: false,
+        // slide_number_text: 'of',
+        navigation_arrows: false,
+        bullets: false,
+        next_on_click: false,
+        swipe: false,
+        next_on_click: false
       }
     });
 

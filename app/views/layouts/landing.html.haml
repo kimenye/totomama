@@ -8,6 +8,7 @@
       %meta{:content => content_for?(:description) ? yield(:description) : t(:description), :name => "description"}
         = stylesheet_link_tag "landing", :media => "all"
         = javascript_include_tag "application"
+        = javascript_include_tag "foundation/foundation.orbit"
         = csrf_meta_tags
         = yield(:head)
         = yield(:scripts)
@@ -37,7 +38,9 @@
         %hr.large-12.columns
         .large-4.columns
           %p Copyright &copy; 2013
-        .large-8.columns
+        .large-4.columns
+          %a{:href => terms_path} Terms & Conditions
+        .large-4.columns
           %ul.inline-list.right
             %li
               %a{:href => admin_area_path}

@@ -1,7 +1,9 @@
 Totomama::Application.routes.draw do
+
   resources :leads
 
-
+  # match '/terms', :to => redirect('/terms.html')
+  match '/terms', to: 'pages#terms'
   #mount Mercury::Engine => '/'
 
   resources :articles
