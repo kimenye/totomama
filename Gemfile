@@ -23,11 +23,12 @@ gem "thin"
 group :development do
   gem 'sqlite3'
 end
-
+gem 'mysql2'
 group :production do
- gem 'mysql2'
+# gem 'mysql2'
 end
-gem 'activerecord-mysql2-adapter'
+# gem 'activerecord-mysql2-adapter'
+
 # gem 'pg'
 gem 'devise'
 gem 'impressionist'
