@@ -1,0 +1,479 @@
+@charset "UTF-8";
+/* line 4, ../../app/assets/stylesheets/home.css.scss */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+/* line 6, ../../app/assets/stylesheets/home.css.scss */
+body h4 {
+  font-weight: 700;
+  font-size: 20px;
+}
+/* line 10, ../../app/assets/stylesheets/home.css.scss */
+body p {
+  font-weight: 300;
+  font-size: 13px;
+}
+
+/* line 17, ../../app/assets/stylesheets/home.css.scss */
+header {
+  margin-top: 20px;
+}
+/* line 19, ../../app/assets/stylesheets/home.css.scss */
+header .strip {
+  height: 15px;
+  background: url(/assets/strip.jpg) repeat-x left top;
+  margin: -27px 0px -30px 0px;
+}
+
+/* line 26, ../../app/assets/stylesheets/home.css.scss */
+a.logo-box {
+  display: block;
+  background: url(/assets/logo.jpg) no-repeat left top;
+  height: 115px;
+}
+
+/* line 32, ../../app/assets/stylesheets/home.css.scss */
+.row .mini-top-nav {
+  float: right;
+}
+/* line 35, ../../app/assets/stylesheets/home.css.scss */
+.row .mini-top-nav li {
+  margin-left: 8px;
+}
+
+/* line 40, ../../app/assets/stylesheets/home.css.scss */
+.social li, .mini-top-nav li {
+  float: right;
+  list-style: none;
+  margin-left: 8px;
+}
+
+/* line 46, ../../app/assets/stylesheets/home.css.scss */
+.social {
+  margin: 27px 0px 0px 0px;
+}
+
+/* line 50, ../../app/assets/stylesheets/home.css.scss */
+.social li a {
+  width: 35px;
+  height: 35px;
+  float: right;
+  overflow: hidden;
+  background: url("/assets/socio-icons.jpg") no-repeat left top;
+}
+
+/* line 59, ../../app/assets/stylesheets/home.css.scss */
+.social .twt {
+  background-position: -33px 0px;
+}
+
+/* line 63, ../../app/assets/stylesheets/home.css.scss */
+.social .pin {
+  background-position: -66px 0px;
+}
+
+/* line 67, ../../app/assets/stylesheets/home.css.scss */
+.mini-top-nav .divider {
+  margin-top: 3px;
+}
+
+/* line 71, ../../app/assets/stylesheets/home.css.scss */
+.search-bar input {
+  font-family: 'Open Sans', sans-serif;
+  border: none;
+  font-weight: 300;
+  font-size: 2em;
+  height: 55px;
+  border-radius: 18px;
+  background: #eee;
+  padding-left: 20px;
+}
+
+/* line 82, ../../app/assets/stylesheets/home.css.scss */
+a.logo-box:hover {
+  background-color: #ffffff;
+}
+
+/* line 87, ../../app/assets/stylesheets/home.css.scss */
+.copyright {
+  padding-top: 10px;
+}
+
+/* line 91, ../../app/assets/stylesheets/home.css.scss */
+ul.product-list {
+  margin-left: 0px;
+}
+
+/* line 95, ../../app/assets/stylesheets/home.css.scss */
+.product-list li {
+  border-left: 0px;
+}
+
+/* line 99, ../../app/assets/stylesheets/home.css.scss */
+.product-flyout-content {
+  background-color: #ffffff;
+}
+
+/* line 103, ../../app/assets/stylesheets/home.css.scss */
+ul.flyout li, .custom li ul li {
+  border-left: 0px;
+  border-bottom: 1px dashed #808080;
+}
+
+/* line 108, ../../app/assets/stylesheets/home.css.scss */
+ul.flyout li a, .custom li ul li a {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #ffffff;
+  font-size: 12px;
+  padding: 10px 5px;
+  border: 0px;
+  font-weight: 700;
+}
+
+/* line 117, ../../app/assets/stylesheets/home.css.scss */
+ul.flyout li a, .custom li ul li a:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+/* line 122, ../../app/assets/stylesheets/home.css.scss */
+.custom > li a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  color: #46166b;
+  font-weight: 400;
+}
+
+/* line 129, ../../app/assets/stylesheets/home.css.scss */
+.custom .flyout {
+  background: #65c8c6;
+  border: none;
+  box-shadow: none;
+  border-radius: 0px 5px 5px 5px;
+  left: 0;
+  padding: 5px;
+}
+
+/* line 138, ../../app/assets/stylesheets/home.css.scss */
+.custom > li:hover {
+  background: none repeat scroll 0 0 #65c8c6;
+  border-radius: 5px 5px 0px 0px;
+}
+
+/* line 143, ../../app/assets/stylesheets/home.css.scss */
+.custom > li a:hover {
+  color: #ffffff;
+}
+
+/* line 147, ../../app/assets/stylesheets/home.css.scss */
+.custom > li > a:first-child {
+  font-weight: 300;
+  font-size: 13px;
+}
+
+/* line 152, ../../app/assets/stylesheets/home.css.scss */
+.custom > li:last-child {
+  border: none;
+}
+
+/* line 156, ../../app/assets/stylesheets/home.css.scss */
+.dropdown {
+  background: #ffffff;
+}
+
+/* line 160, ../../app/assets/stylesheets/home.css.scss */
+.nav-bar {
+  height: 40px;
+  background: #fff;
+  border: none;
+}
+
+/* line 166, ../../app/assets/stylesheets/home.css.scss */
+.nav-bar li {
+  height: 40px;
+  border: none;
+  font-weight: 400;
+}
+
+/* line 172, ../../app/assets/stylesheets/home.css.scss */
+li.top {
+  border-right: 1px dashed gray;
+  margin: 0 2px;
+}
+
+/* line 177, ../../app/assets/stylesheets/home.css.scss */
+.nav-bar > li > a:first-child {
+  padding: 0 5px;
+  width: 116px;
+  line-height: 20px;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* line 185, ../../app/assets/stylesheets/home.css.scss */
+.nav-bar > li.has-flyout > a:first-child::after {
+  content: normal;
+  font-weight: 300;
+}
+
+/* line 190, ../../app/assets/stylesheets/home.css.scss */
+.nav-bar > li.has-flyout > a:first-child {
+  padding-right: 15px;
+}
+
+/* line 194, ../../app/assets/stylesheets/home.css.scss */
+.nav-bar > li.has-flyout > a:first-child::after {
+  right: 5px;
+}
+
+/* line 198, ../../app/assets/stylesheets/home.css.scss */
+.menu-flyout {
+  min-width: 450px;
+}
+
+/* line 202, ../../app/assets/stylesheets/home.css.scss */
+.menu-flyout .ad-panel {
+  margin-top: 20px;
+}
+
+/* line 206, ../../app/assets/stylesheets/home.css.scss */
+.header {
+  background-color: #46166b;
+  border-radius: 5px;
+}
+/* line 211, ../../app/assets/stylesheets/home.css.scss */
+.header .large-3 h5 {
+  float: right;
+  margin-right: 10px;
+}
+
+/* line 217, ../../app/assets/stylesheets/home.css.scss */
+.header h5, .header a {
+  color: #ffffff;
+}
+
+/* line 221, ../../app/assets/stylesheets/home.css.scss */
+.detail h5 {
+  color: #46166b;
+}
+
+/* line 225, ../../app/assets/stylesheets/home.css.scss */
+.summary {
+  margin: 20px 0px;
+}
+
+/* line 229, ../../app/assets/stylesheets/home.css.scss */
+.summary a {
+  color: #46166b;
+  font-size: 12px;
+  min-height: 35px;
+  display: block;
+  font-weight: 300;
+}
+
+/* line 237, ../../app/assets/stylesheets/home.css.scss */
+.summary a.th {
+  margin-bottom: 5px;
+}
+
+/* line 241, ../../app/assets/stylesheets/home.css.scss */
+.ad .panel {
+  border-radius: 5px;
+  background: #65c8c6;
+  height: 90px;
+}
+
+/* line 247, ../../app/assets/stylesheets/home.css.scss */
+.sidebar .panel {
+  height: 160px;
+}
+
+/* line 251, ../../app/assets/stylesheets/home.css.scss */
+.ad .panel h3, .ad .panel h5 {
+  text-align: center;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 767px) {
+  /* line 258, ../../app/assets/stylesheets/home.css.scss */
+  .custom {
+    display: none;
+  }
+}
+/* line 265, ../../app/assets/stylesheets/home.css.scss */
+.rating,
+.rating-readonly {
+  float: left;
+}
+
+/* line 269, ../../app/assets/stylesheets/home.css.scss */
+.summary .rating-readonly:not(:checked) > label {
+  font-weight: 100;
+  font-size: 100%;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+/* line 278, ../../app/assets/stylesheets/home.css.scss */
+.rating-readonly:not(:checked) > input,
+.rating:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* line 284, ../../app/assets/stylesheets/home.css.scss */
+.rating-readonly:not(:checked) > label:hover {
+  cursor: default;
+}
+
+/* line 289, ../../app/assets/stylesheets/home.css.scss */
+.rating-readonly:not(:checked) > label,
+.rating:not(:checked) > label {
+  float: right;
+  width: 1.1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 175%;
+  font-weight: 100;
+  line-height: 1.2;
+  color: #ddd;
+  text-shadow: 1px 1px #bbbbbb, 2px 2px #666666, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+}
+
+/* line 304, ../../app/assets/stylesheets/home.css.scss */
+.rating-readonly:not(:checked) > label:before,
+.rating:not(:checked) > label:before {
+  content: '★ ';
+}
+
+/* line 309, ../../app/assets/stylesheets/home.css.scss */
+.rating-readonly > input:checked ~ label,
+.rating > input:checked ~ label {
+  color: #f70;
+  text-shadow: 1px 1px #cc6600, 2px 2px #994400, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+}
+
+/* line 315, ../../app/assets/stylesheets/home.css.scss */
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: gold;
+  text-shadow: 1px 1px goldenrod, 2px 2px #b57340, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+}
+
+/* line 324, ../../app/assets/stylesheets/home.css.scss */
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+  color: #ea0;
+  text-shadow: 1px 1px goldenrod, 2px 2px #b57340, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+}
+
+/* line 329, ../../app/assets/stylesheets/home.css.scss */
+#moreResults {
+  padding-top: 10px;
+  margin: 0;
+}
+
+/* line 334, ../../app/assets/stylesheets/home.css.scss */
+#moreResults li {
+  list-style-type: none;
+  padding: 5px;
+  border-bottom: 1px black dashed;
+}
+
+/* line 340, ../../app/assets/stylesheets/home.css.scss */
+#moreResults .alternate {
+  background-color: #98CED4;
+}
+
+/* line 345, ../../app/assets/stylesheets/home.css.scss */
+.form-bg {
+  padding: 30px 0px;
+  margin-top: -30px;
+  position: relative;
+  z-index: 1;
+}
+/* line 350, ../../app/assets/stylesheets/home.css.scss */
+.form-bg .side-copy {
+  padding-right: 20px;
+}
+
+/* line 355, ../../app/assets/stylesheets/home.css.scss */
+.shop-banner {
+  position: relative;
+}
+/* line 357, ../../app/assets/stylesheets/home.css.scss */
+.shop-banner img {
+  width: 100%;
+}
+
+/* line 362, ../../app/assets/stylesheets/home.css.scss */
+.admin-list {
+  width: 100%;
+}
+
+/* line 366, ../../app/assets/stylesheets/home.css.scss */
+.field input, textarea {
+  background: #E6E7E8;
+  color: #777;
+}
+
+/* line 371, ../../app/assets/stylesheets/home.css.scss */
+.field select {
+  margin: 0 0 12px 0;
+  height: 34px;
+  overflow: hidden;
+  color: #777;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  background-color: #E6E7E8;
+  border: 1px solid #ccc;
+}
+
+/* line 384, ../../app/assets/stylesheets/home.css.scss */
+.leads .button {
+  background-color: #330066;
+  border: 1px solid;
+  display: block;
+  margin: auto;
+}
+
+/* line 392, ../../app/assets/stylesheets/home.css.scss */
+.section-container.horizontal-nav section.active .content, .section-container.horizontal-nav .section.active .content {
+  border: 1px solid #65C8C6;
+  border-radius: 0 5px 5px 5px;
+  border-style: solid;
+  border-width: 5px 1px 1px;
+}
+
+/* line 405, ../../app/assets/stylesheets/home.css.scss */
+.section-container section.active .title, .section-container .section.active .title, .section-container.auto section.active .title, .section-container.auto .section.active .title {
+  background-color: #65C8C6 !important;
+  color: #FFFFFF;
+  display: block;
+  border: medium none;
+  border-radius: 5px 5px 0 0;
+}
+
+/* line 413, ../../app/assets/stylesheets/home.css.scss */
+.xtra-p-style {
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+/* line 418, ../../app/assets/stylesheets/home.css.scss */
+.xtra-style-on-headers {
+  margin-top: -1.6rem;
+}
+
+/* line 422, ../../app/assets/stylesheets/home.css.scss */
+.image-container {
+  height: 250px;
+  margin-bottom: 0.7rem;
+  overflow: hidden;
+}

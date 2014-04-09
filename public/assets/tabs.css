@@ -1,0 +1,37 @@
+/* line 3, ../../app/assets/stylesheets/tabs.css.scss */
+.product .section-container.tabs section.active .title, .product .section-container.tabs .section.active .title {
+  background-color: #65c8c6;
+  color: #ffffff;
+  display: block;
+}
+/* line 9, ../../app/assets/stylesheets/tabs.css.scss */
+.product .section-container.tabs section .title, .product .section-container.tabs .section .title {
+  background-color: #46166b;
+  color: #ffffff;
+  display: block;
+}
+/* line 15, ../../app/assets/stylesheets/tabs.css.scss */
+.product .section-container.tabs section:nth-child(2) .title {
+  margin-left: 20px;
+}
+/* line 19, ../../app/assets/stylesheets/tabs.css.scss */
+.product .section-container.tabs section:nth-child(3) .title {
+  margin-left: 35px;
+}
+/* line 23, ../../app/assets/stylesheets/tabs.css.scss */
+.product .section-container.tabs section .title, .product .section-container.tabs .section .title {
+  border: none;
+  border-radius: 5px 5px 0px 0px;
+}
+/* line 28, ../../app/assets/stylesheets/tabs.css.scss */
+.product .section-container.tabs section .content, .product .section-container.tabs .section .content {
+  border-left: 1px solid #65c8c6;
+  border-bottom: 1px solid #65c8c6;
+  border-right: 1px solid #65c8c6;
+  border-top: 5px solid #65c8c6;
+  border-radius: 0px 5px 5px 5px;
+}
+/* line 36, ../../app/assets/stylesheets/tabs.css.scss */
+.product .section-container section .title a, .product .section-container .section .title a, .product .section-container.auto section .title a, .product .section-container.auto .section .title a {
+  color: #ffffff;
+}

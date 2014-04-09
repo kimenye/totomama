@@ -1,0 +1,160 @@
+/* line 8, ../../app/assets/stylesheets/products.css.scss */
+.detail .tabs dd.active a,
+.detail .tabs dd a,
+.detail .tabs li a,
+.detail .tabs li.active a {
+  color: #ffffff;
+}
+
+/* line 14, ../../app/assets/stylesheets/products.css.scss */
+.detail .tabs dd a,
+.detail .tabs dd.active a {
+  border-radius: 5px 5px 0px 0px;
+}
+
+/* line 18, ../../app/assets/stylesheets/products.css.scss */
+.detail .tabs {
+  border: 0px;
+}
+
+/* line 22, ../../app/assets/stylesheets/products.css.scss */
+.detail .tabs dd.active a, .tabs li.active a {
+  border-left: 1px solid #65c8c6;
+  border-right: 1px solid #65c8c6;
+  border-top: 1px solid #65c8c6;
+  display: block;
+}
+
+/* line 31, ../../app/assets/stylesheets/products.css.scss */
+.detail .tabs dd,
+.detail .tabs li {
+  margin-right: 15px;
+}
+
+/* line 35, ../../app/assets/stylesheets/products.css.scss */
+.detail .tabs dd.active a {
+  background-color: #65c8c6;
+}
+
+/* line 39, ../../app/assets/stylesheets/products.css.scss */
+.detail .tabs dd a {
+  background-color: #46166b;
+}
+
+/* line 43, ../../app/assets/stylesheets/products.css.scss */
+.detail .tabs li.active {
+  border: 0px;
+}
+
+/* line 47, ../../app/assets/stylesheets/products.css.scss */
+.detail ul.tabs-content.contained li.active {
+  border-left: 1px solid #65c8c6;
+  border-bottom: 1px solid #65c8c6;
+  border-right: 1px solid #65c8c6;
+  border-top: 7px solid #65c8c6;
+  border-radius: 0px 5px 5px 5px;
+}
+
+/* line 56, ../../app/assets/stylesheets/products.css.scss */
+.detail .tabs dd.active,
+.detail .tabs li.active {
+  margin-top: 0px;
+  border: none;
+}
+
+/* line 61, ../../app/assets/stylesheets/products.css.scss */
+.login {
+  text-align: center;
+}
+
+/* line 65, ../../app/assets/stylesheets/products.css.scss */
+#loginLink {
+  background: url(/assets/sign-in-with-facebook.png) no-repeat;
+  display: block;
+  height: 47px;
+  width: 223px;
+}
+
+/* line 72, ../../app/assets/stylesheets/products.css.scss */
+.review h5 {
+  margin-top: 8px;
+  text-align: right;
+}
+
+/* line 77, ../../app/assets/stylesheets/products.css.scss */
+.review .social li {
+  margin-left: 5px;
+  margin-top: -5px;
+}
+
+/* line 82, ../../app/assets/stylesheets/products.css.scss */
+.review .social ul {
+  margin-left: 10px;
+}
+
+/* line 86, ../../app/assets/stylesheets/products.css.scss */
+.your-rating {
+  background-color: #00a9c0;
+}
+
+/* line 90, ../../app/assets/stylesheets/products.css.scss */
+.your-rating.row {
+  margin: 0 -20px;
+}
+
+/* line 94, ../../app/assets/stylesheets/products.css.scss */
+.your-rating h5 {
+  text-align: left;
+  color: #ffffff;
+  margin-left: 17px;
+}
+
+/* line 100, ../../app/assets/stylesheets/products.css.scss */
+.your-rating textarea {
+  margin-left: 17px;
+}
+
+/* line 105, ../../app/assets/stylesheets/products.css.scss */
+.your-rating.label {
+  margin-left: 10px;
+}
+
+/* line 109, ../../app/assets/stylesheets/products.css.scss */
+.your-rating .button {
+  background-color: #65c8c6;
+}
+
+/* line 113, ../../app/assets/stylesheets/products.css.scss */
+.divider.row {
+  border-bottom: 2px solid #65c8c6;
+  margin-bottom: 10px;
+}
+
+/*.map_container {
+  padding: 6px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc #ccc #999 #ccc;
+  -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+  -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+  box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
+}*/
+/* line 128, ../../app/assets/stylesheets/products.css.scss */
+.map_container img {
+  max-width: none;
+}
+
+/* line 130, ../../app/assets/stylesheets/products.css.scss */
+.pull-right {
+  float: right;
+}
+
+/* line 134, ../../app/assets/stylesheets/products.css.scss */
+.pull-left {
+  float: left;
+}
+
+/* line 139, ../../app/assets/stylesheets/products.css.scss */
+.products .section-container section .title a {
+  padding: 5px 15px;
+}

@@ -14,31 +14,31 @@
         %img{:src => "/assets/banner.jpg"}
   .row
     .large-12.columns.large-centered.form-bg
-      %h4.xtra-style-on-headers.bluish LIST WITH US
+      %h4.xtra-style-on-headers.bluish INTRODUCING TOTO & MAMA
       %p.xtra-p-style Welcome to Toto & Mama Online Directory where our members are your customers. 
       %p.xtra-p-style We understand why you started your business and want to make it easier for your primary customers - expectant women, new parents, parents of babies, toddlers and older children - to find your business, products and services.
   .row
-    %h4.xtra-style-on-headers.bluish Why list with us?
+    %h4.xtra-style-on-headers.bluish WHY LIST WITH US?
     .large-6.columns
-      %h6.xtra-style-on-headers.magenta-bold No Cost
+      %h6.xtra-style-on-headers.red-bold No Cost
       %p.xtra-p-style We are offering you an opportunity to list your business for free on our website.
     .large-6.columns
-      %h6.xtra-style-on-headers.magenta-bold Accessibility
+      %h6.xtra-style-on-headers.red-bold Accessibility
       %p.xtra-p-style Your business will easily be reachable just by a click of a button.
     .large-6.columns
-      %h6.xtra-style-on-headers.magenta-bold Increased Business
+      %h6.xtra-style-on-headers.red-bold Increased Business
       %p.xtra-p-style A direct link from our website will help with the growth of traffic to your business.
     .large-6.columns
-      %h6.xtra-style-on-headers.magenta-bold Feedback
+      %h6.xtra-style-on-headers.red-bold Feedback
       %p.xtra-p-style You will enjoy real-time customer comments and reviews that will help you improve your business.
     .large-6.columns
-      %h6.xtra-style-on-headers.magenta-bold Innovative Marketing
+      %h6.xtra-style-on-headers.red-bold Innovative Marketing
       %p.xtra-p-style At Toto & Mama we have a dedicated team that will provide you with new and innovative ways to promote your business.
     .large-6.columns
       %p.xtra-p-style For further information, email us on 
       %a.magenta-bold{:href => 'mailto:habari@totomama.co.ke'} habari@totomama.co.ke
   .row#register
-    %h3.xtra-style-on-headers.bluish Register your business with us today
+    %h3.xtra-style-on-headers.bluish LIST WITH US
     %ul{"data-orbit" => ""}
       %li{"data-orbit-slide" => "register-1"}
         .large-6.columns.main_form
@@ -121,6 +121,10 @@
                   .notice
                     = flash[:notice]
                 = show_visual_captcha(:type => :horizontal)
+          .row
+            .large-12.columns
+              .terms
+                I accept the terms and conditions
           .row
             .large-12.columns  
               .actions
