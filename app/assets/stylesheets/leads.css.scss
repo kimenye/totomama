@@ -105,7 +105,7 @@
   font-weight: 900;
   display: block;
   clear: both;
-  padding-TOP: 35PX;
+  padding-top: 35PX;
   font-size: 17px;
 }
 
@@ -144,4 +144,35 @@ body {
 
 .terms {
   border-bottom: 1px solid #dedede;
+}
+
+label.terms-agreement {
+  color: black !important;
+  margin-left: 45px;
+}
+
+.xtra-p-style.further-info {
+  font-weight: bold;
+  font-style: italic;
+}
+
+h4.red-text {
+  color: red !important;
+}
+
+a.contact-link {
+  color: #008cba !important;
+  font-weight: bold;
+}
+
+span.accept-text {
+  padding-left: 10px;
+}
+
+input#save-button {
+  height: 42px;
+  width: 124px;
+  margin-top: 17px;
+  padding: 10px 20px 10px 20px;
+  font: bold 20px Arial;
 }
