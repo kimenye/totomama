@@ -19,6 +19,5 @@
 //= require jquery-ui-1.9.2.custom.min
 //= require visualcaptcha
 
-$(document).foundation();
 
 $(function(){ $(document).foundation(); });

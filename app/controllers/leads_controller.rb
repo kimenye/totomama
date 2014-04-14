@@ -1,4 +1,5 @@
 class LeadsController < ApplicationController
+  before_filter :authenticate_admin!, :except => [:thankyou, :new, :create]
   include VisualCaptcha::ControllerHelpers
   layout "landing"
   # GET /leads
