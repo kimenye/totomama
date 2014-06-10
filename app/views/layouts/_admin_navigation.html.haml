@@ -17,64 +17,41 @@
             %ul.dropdown
               %li
                 =link_to "Show Stages", stages_path
-
-/ .row
-/   .large-12.columns
-/     %nav.top-bar
-/       %ul.title-area
-/         %li.name
-/           %h1
-/             =link_to "Welcome #{current_admin.name}", admin_area_path
-/       %secton.top-bar-section
-/         %ul.left
-/           %li.divider
-/             %li.has-dropdown
-/               %a{:href=>"#"} Stages
-/               %ul.dropdown
-/                 %li
-/                   =link_to "Show Stages", stages_path
-/                 %li
-/                   =link_to "New Stage", new_stage_path
-/           %li.has-dropdown
-/             %a{:href=>"#"} Categories
-/             %ul.dropdown
-/               %li
-/                 =link_to "Show Categories", categories_path
-/               %li
-/                 =link_to "New Category", new_category_path
-/           %li.has-dropdown
-/             %a{:href=>"#"} Products
-/             %ul.dropdown
-/               %li
-/                 =link_to "Show Products", products_path
-/               %li
-/                 =link_to "New Product", new_product_path
-/           %li.has-dropdown
-/             %a{:href=>"#"} Shops
-/             %ul.dropdown
-/               %li
-/                 =link_to "Show Shops", shop_list_path
-/               %li
-/                 =link_to "New Shop", "/products/new?type=Shop"
-/           %li.has-dropdown
-/             %a{:href=>"#"} Events
-/             %ul.dropdown
-/               %li
-/                 =link_to "Show Events", event_list_path
-/               %li
-/                 =link_to "New Event", "/products/new?type=Event"
-/           -#%li.has-dropdown
-/             %a{:href => "#"} Articles
-/             %ul.dropdown
-/               %li
-/                 =link_to "Show Articles", articles_path
-/               %li
-/                 =link_to "New Article", new_article_path
-/           %li.has-dropdown
-/             %a{:href => "/leads"} Leads
-/             %ul.dropdown
-/               %li
-/                 =link_to "Show Leads", "/leads/"
-/               -#%li
-/                 =link_to "New Lead", new_lead_path
-
+          %li.has-dropdown
+            %a{:href => "#"} Categories
+            %ul.dropdown
+              %li
+                =link_to "Show Categories", categories_path
+          %li.has-dropdown
+            %a{:href => "#"} Products
+            %ul.dropdown
+              %li
+                =link_to "Show Products", products_path
+              %li
+                =link_to "New Product", new_product_path
+          %li.has-dropdown
+            %a{:href=>"#"} Shops
+            %ul.dropdown
+              %li
+                =link_to "Show Shops", shop_list_path
+              %li
+                =link_to "New Shop", "/products/new?type=Shop"
+          %li.has-dropdown
+            %a{:href=>"#"} Events
+            %ul.dropdown
+              %li
+                =link_to "Show Events", event_list_path
+              %li
+                =link_to "New Event", "/products/new?type=Event"
+          / %li.has-dropdown
+          /   %a{:href => "#"} Articles
+          /   %ul.dropdown
+          /     %li
+          /       =link_to "Show Articles", articles_path
+          /     %li
+          /       =link_to "New Article", new_article_path
+          %li.has-dropdown
+            %a{:href => "/leads"} Leads
+            %ul.dropdown
+              %li
+                =link_to "Show Leads", "/leads/"
