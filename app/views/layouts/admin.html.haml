@@ -24,13 +24,9 @@
     %footer
       .copyright.row
         %hr.large-12.columns
-        .four.columns
+        .large-10.columns
           %p Copyright &copy; 2013
-        .large-8.columns
-          %ul.inline-list.right
-            %li
-              - if admin_signed_in?
-                = link_to "Log out #{current_admin.name}", destroy_admin_session_path, :method => :delete
-              - else
-                = link_to "Back", root_path
+        .large-2.columns
+          - if admin_signed_in?
+            = link_to "Log out #{current_admin.name}", destroy_admin_session_path, :method => :delete
     / ! end of #container

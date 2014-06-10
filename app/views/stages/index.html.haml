@@ -1,22 +1,23 @@
-.row
-  .twelve.columns
-    %table
-      %thead
-        %tr
-          %th Name
-          %th Order
-          %th
-          %th
-          %th
-      %tbody
-        - @stages.each do |stage|
+.main_content
+  .row
+    .twelve.columns
+      %table
+        %thead
           %tr
-            %td= stage.name
-            %td= stage.order
-            %td= link_to 'Show', stage
-            %td= link_to 'Edit', edit_stage_path(stage)
-            %td= link_to 'Destroy', stage, method: :delete, data: { confirm: 'Are you sure?' }
+            %th Name
+            %th Order
+            %th
+            %th
+            %th
+        %tbody
+          - @stages.each do |stage|
+            %tr
+              %td= stage.name
+              %td= stage.order
+              %td= link_to 'Show', stage
+              %td= link_to 'Edit', edit_stage_path(stage)
+              %td= link_to 'Destroy', stage, method: :delete, data: { confirm: 'Are you sure?' }
 
-    %br
+      %br
 
-    = link_to 'New Stage', new_stage_path
+      = link_to 'New Stage', new_stage_path
