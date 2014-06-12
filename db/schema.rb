@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130701132305) do
+ActiveRecord::Schema.define(:version => 20140611131105) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -115,6 +115,32 @@ ActiveRecord::Schema.define(:version => 20130701132305) do
     t.string   "hours"
     t.string   "business_target"
     t.text     "description"
+  end
+
+  create_table "product_categories", :force => true do |t|
+    t.integer  "category_id"
+    t.integer  "product_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "product_categories", ["category_id"], :name => "index_product_categories_on_category_id"
+  add_index "product_categories", ["product_id"], :name => "index_product_categories_on_product_id"
+
+  create_table "product_type_products", :force => true do |t|
+    t.integer  "product_type_id"
+    t.integer  "product_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "product_type_products", ["product_id"], :name => "index_product_type_products_on_product_id"
+  add_index "product_type_products", ["product_type_id"], :name => "index_product_type_products_on_product_type_id"
+
+  create_table "product_types", :force => true do |t|
+    t.string   "product_type"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "products", :force => true do |t|

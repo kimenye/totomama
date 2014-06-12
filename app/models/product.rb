@@ -2,8 +2,12 @@ class Product < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, use: :slugged
 
-  belongs_to :category
+  # belongs_to :category
   has_many :ratings, :dependent => :destroy
+  has_many :product_types, :through => :product_type_products
+  has_many :product_type_products
+  has_many :categories, :through => :product_categories
+  has_many :product_categories
   attr_accessible :description, :name, :price, :rating, :category_id, :impressions_count
 
   attr_accessible :photo
