@@ -18,8 +18,8 @@
             -#%td= product.description
             %td= product.price
             %td= product.rating
-            - if !product.category.nil?
-              %td= product.category.name
+            - if !product.categories.first.nil?
+              %td= product.categories.first.name
             - else
               %td
             %td= link_to 'Show', product

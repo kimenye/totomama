@@ -15,6 +15,8 @@ Devise.setup do |config|
   # available as additional gems.
   require 'devise/orm/active_record'
 
+   config.secret_key = 'b5bb9faf07e65b7b745034357e10a140eaadecab6b2b3f5ae86ff7f124e083b6029e9e18d3970e3760580e642c461982d99c11ba9527ee323aead43afac43ead'
+
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
   # just :email. You can configure it to use [:username, :subdomain], so for

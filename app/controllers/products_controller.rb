@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     product_categories
-    @product = Product.find(params[:id])
+    @product = Product.friendly.find(params[:id])
 
     impressionist(@product)
     @product.impressions_count = @product.impressionist_count

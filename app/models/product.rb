@@ -12,6 +12,7 @@ class Product < ActiveRecord::Base
 
   attr_accessible :photo
   has_attached_file :photo, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/assets/coming-soon.png"
+  do_not_validate_attachment_file_type :photo
 
   def should_generate_new_friendly_id?
     new_record?

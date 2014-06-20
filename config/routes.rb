@@ -3,7 +3,7 @@ Totomama::Application.routes.draw do
   resources :leads
 
   # match '/terms', :to => redirect('/terms.html')
-  match '/terms', to: 'pages#terms'
+  get '/terms', to: 'pages#terms'
   #mount Mercury::Engine => '/'
 
   resources :articles
@@ -25,13 +25,13 @@ Totomama::Application.routes.draw do
   root :to => "leads#new"
   #root :to => "home#index"
 
-  match 'administration' => 'admin#index', :as => :admin_area
+  get 'administration' => 'admin#index', :as => :admin_area
 
-  match 'shops' => 'products#index', :as => :shop_list, :defaults => { :type => 'Shop' }
-  match 'events' => 'products#index', :as => :event_list, :defaults => { :type => 'Event' }
+  get 'shops' => 'products#index', :as => :shop_list, :defaults => { :type => 'Shop' }
+  get 'events' => 'products#index', :as => :event_list, :defaults => { :type => 'Event' }
 
-  match 'search' => 'home#search'
-  match 'thankyou' => 'leads#thankyou', :as => :thank_you
+  get 'search' => 'home#search'
+  get 'thankyou' => 'leads#thankyou', :as => :thank_you
 
   get '/channel.html' => proc {
     [
