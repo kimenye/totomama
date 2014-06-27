@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140611131105) do
+ActiveRecord::Schema.define(version: 20140627093623) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -49,11 +49,13 @@ ActiveRecord::Schema.define(version: 20140611131105) do
     t.string   "name"
     t.text     "description"
     t.integer  "order"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.integer  "stage_id"
+    t.integer  "parent_category_id"
   end
 
+  add_index "categories", ["parent_category_id"], name: "index_categories_on_parent_category_id"
   add_index "categories", ["stage_id"], name: "index_categories_on_stage_id"
 
   create_table "ckeditor_assets", force: true do |t|
@@ -138,10 +140,13 @@ ActiveRecord::Schema.define(version: 20140611131105) do
   add_index "product_type_products", ["product_type_id"], name: "index_product_type_products_on_product_type_id"
 
   create_table "product_types", force: true do |t|
-    t.string   "product_type"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.string   "name"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "parent_product_type_id"
   end
+
+  add_index "product_types", ["parent_product_type_id"], name: "index_product_types_on_parent_product_type_id"
 
   create_table "products", force: true do |t|
     t.string   "name"

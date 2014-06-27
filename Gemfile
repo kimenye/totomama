@@ -24,7 +24,7 @@ gem "thin",'~>1.6.2'
 group :development do
   gem 'sqlite3'
 end
-# gem 'mysql2'
+
 group :production do
 gem 'mysql2'
 end
