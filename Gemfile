@@ -6,6 +6,9 @@ gem 'rails', '4.0.0'
   gem 'coffee-rails', '~> 4.0.1'
   gem 'uglifier', '>= 2.5.1'
 # end
+
+# gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'rails_admin'
 gem 'activeresource'
 gem 'jquery-rails','~>3.1.0'
 gem "haml"
@@ -29,6 +32,7 @@ group :production do
 gem 'mysql2'
 end
 # gem 'activerecord-mysql2-adapter'
+# gem 'active?record'
 
 # gem 'pg'
 gem 'devise', '~> 3.1'

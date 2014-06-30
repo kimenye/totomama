@@ -1,5 +1,7 @@
 Totomama::Application.routes.draw do
-
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+# , ActiveAdmin::Devise.config
+#   ActiveAdmin.routes(self)
   resources :leads
 
   # match '/terms', :to => redirect('/terms.html')
