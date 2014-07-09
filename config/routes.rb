@@ -1,5 +1,5 @@
 Totomama::Application.routes.draw do
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  mount RailsAdmin::Engine => '/administration', as: 'rails_admin'
 # , ActiveAdmin::Devise.config
 #   ActiveAdmin.routes(self)
   resources :leads
@@ -27,7 +27,7 @@ Totomama::Application.routes.draw do
   root :to => "leads#new"
   #root :to => "home#index"
 
-  get 'administration' => 'admin#index', :as => :admin_area
+  get 'editor' => 'admin#index', :as => :admin_area
 
   get 'shops' => 'products#index', :as => :shop_list, :defaults => { :type => 'Shop' }
   get 'events' => 'products#index', :as => :event_list, :defaults => { :type => 'Event' }

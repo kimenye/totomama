@@ -24,6 +24,8 @@ gem 'foundation-rails', '~>5.2.3.0'
 gem "quiet_assets", ">= 1.0.3", :group => :development
 gem "figaro", ">= 0.7.0"
 gem "thin",'~>1.6.2'
+gem 'nokogiri', '1.6.1'
+
 group :development do
   gem 'sqlite3'
 end
